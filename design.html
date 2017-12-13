@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <title>design</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/6x16-free-application-icons/16/Red_star.png">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: "Verdana", serif;
+}
+body {margin: 0;}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  text-align: center;
+  padding:5px;
+}
+.navbar {
+  text-align: center;
+}
+.navbar a {
+    transition: all 0.5s ease;
+}
+
+ .affix {
+      top: 0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+
+  .affix + .container-fluid {
+      padding-top: 100px;
+  }
+
+@media screen and (max-width: 900px){
+	.navigbar2 {display:none;}
+}
+
+.containercard {
+  position: relative;
+  margin:0;
+  margin-bottom:50px;
+  text-align:center;
+  width: 100%;
+}
+
+.imagecard {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 100%;
+  height: 35%;
+  transition: .5s ease;
+}
+
+.containercard:hover .overlay {
+  height: 100%;
+  opacity: 0.9;
+}
+
+.textcard {
+  white-space: initial; 
+  color:white;
+  font-size: 16px;
+  position: absolute;
+  overflow: hidden;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  -ms-transform: translate(-50%, -25%);
+}
+.castomers {
+	background: linear-gradient(45deg, DeepSkyBlue,DodgerBlue);
+	color:white;
+
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.cancelbtn,.signupbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 50%;
+}
+.containerform {
+    padding: 10%;
+}
+@media screen and (max-width: 900px){
+	.captionh2 {font-size:15px;}
+	.btn-caption {font-size:15px;}
+	h4 {font-size:15px;}
+}
+@media screen and (max-width: 767px){
+	.imgrespond {display:none;}
+}
+
+.btn-default {
+ background:#a6a6a6;
+  }
+  .btn-default:hover {
+ background:#404040;
+  }
+ .navbar-inverse {
+  	background:#303136;
+  	margin:0;
+  }
+<!--//ratings carousel -->
+  .features-content-wrapper {
+  padding-right: 60px;
+  position: relative;
+  margin-bottom: 60px;
+}
+.features-content-wrapper {
+  margin-bottom: 30px;
+}
+.features-content-wrapper .feature-list {
+  margin-bottom: 60px;
+  margin-left: 30px;
+}
+.features-content-wrapper .feature-list li {
+  margin-bottom: 15px;
+}
+.features-content-wrapper .feature-list {
+  margin-right: 5px;
+}
+.reviews-carousel {
+  margin-bottom: 30px;
+}
+.reviews-carousel .carousel-inner {
+  padding-bottom: 30px;
+}
+.reviews-carousel .review {
+  border-left: none;
+  position: relative;
+  font-size: 14px;
+  padding: 30px 60px;
+}
+.reviews-carousel .review .fa-quote-left {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  color: #999ca4;
+  font-size: 18px;
+}
+.reviews-carousel .source {
+  text-align: center;
+}
+.reviews-carousel .profile {
+  width: 60px;
+  margin-bottom: 10px;
+}
+.reviews-carousel .name {
+  font-size: 13px;
+  color: #999ca4;
+}
+.reviews-carousel .rating {
+  color: #159bc0;
+  margin-bottom: 15px;
+}
+.reviews-carousel .carousel-indicators {
+  bottom: 0;
+  margin-bottom: 0;
+}
+.reviews-carousel .carousel-indicators li {
+  background-color: #cfd0d4;
+  border: none;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  margin-right: 5px;
+}
+.reviews-carousel .carousel-indicators li.active {
+  background-color: #656972;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  margin-right: 5px;
+}
+.posts-promo-block .carousel-indicators {
+  bottom: -45px;
+}
+.posts-promo-block .carousel-indicators  {
+  background-color: #ccc;
+  border: none;
+  width: 11px;
+  height: 11px;
+  margin: 0;
+  margin-right: 5px;
+}
+.posts-promo-block .carousel-indicators li.active {
+  background-color: #159bc0;
+}
+.reviews-carousel .carousel-inner {
+  padding-bottom: 30px;
+}
+.reviews-carousel .source {
+  text-align: center;
+}
+.quote-item .source {
+  font-size: 14px;
+  margin-top: 30px;
+}
+.quote-item .source .title {
+  color: #7d828d;
+}
+.reviews-carousel .rating {
+  color: #159bc0;
+  margin-bottom: 15px;
+}
+<!--//ratings carousel -->
+.parag1 {
+	padding-left:50px;
+	margin-bottom:30px;
+	max-width:90%;
+}
+.glyphicon.glyphicon-ok {
+    font-size:18px;
+}
+.supportstyle {
+	height:auto;
+	text-align:center;
+	margin:0;
+	padding: 7% 7% 0 7%;
+}
+.OurApps {
+	height:auto;
+	text-align:center;
+	margin:0;
+	padding: 2% 1%;
+	background:linear-gradient(45deg, DeepSkyBlue,DodgerBlue);
+}
+.bottomCols {
+	list-style-type:none;
+	font-size:15px;
+	color:white;
+	padding:50px;
+}
+.lasbottom {
+	font-size:10px;
+	text-align:center;
+	color:white;
+	padding: 25px 0;
+	margin-bottom:0;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a style="margin:0 0 5px 20px;font-size:25px;" class="navbar-brand" href="#"><i class="fa fa-code"></i> Startup</a>
+    </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Stories</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+ </div>
+</nav>
+
+  <div id="myCarousel" class="carousel" data-ride="carousel" >
+    <div class="carousel-inner">
+      <div class="item active" style="margin:0;">
+        <img src="http://mailworks.com.au/wp-content/uploads/2015/11/banner-slide1-1920x600.jpg" alt="pic1" style="width:100%;height:100%;filter: brightness(60%);">
+        <div class="carousel-caption"  style="color:white;padding:0;">
+          <h2 class="captionh2">Everything you need to kickstart your SaaS Business</h2>
+          <p style="margin-bottom:10px;">Startup Kit helps developers</p>
+          <button type="button" class="btn btn-info" style="padding:7px 15px;font-size:16px;transition: all 0.5s ease;"><b>Start free</b></button>
+ <button type="button" class="btn btn-link" style="padding:7px 0;color:white;font-size:16px;"><span class="glyphicon glyphicon-play"></span>  See how</button>
+        </div>
+      </div>
+
+      <div class="item" style="margin:0;">
+        <img src="https://i.pinimg.com/originals/f2/06/ef/f206ef9bba9a509d48a94f50c10096bd.jpg" alt="pic2" style="width:100%;height:100%;filter: brightness(60%);">
+        <div class="carousel-caption" style="color:white;padding:0;">
+          <h2 class="captionh2">Everything you need to kickstart your SaaS Business</h2>
+          <p style="margin-bottom:10px;">Startup Kit helps developers</p>
+          <button type="button" class="btn btn-info" style="padding:7px 15px;font-size:16px;transition: all 0.5s ease;"><b>Start free</b></button>
+ <button type="button" class="btn btn-link" style="padding:7px 0;color:white;font-size:16px;"><span class="glyphicon glyphicon-play"></span>  See how</button>
+        </div>
+      </div>
+    
+      <div class="item" style="margin:0;">
+        <img src="http://www.niallstrickland.com/wp-content/uploads/2016/07/consulting.jpg" alt="pic3" style="width:100%;height:100%;filter: brightness(60%);">
+        <div class="carousel-caption" style="color:white;padding:0;">
+          <h2 class="captionh2">Everything you need to kickstart your SaaS Business</h2>
+          <p style="margin-bottom:10px;">Startup Kit helps developers</p>
+         <button type="button" class="btn btn-info" style="padding:7px 15px;font-size:16px;transition: all 0.5s ease;"><b>Start free</b></button>
+ <button type="button" class="btn btn-link" style="padding:7px 0;color:white;font-size:16px;"><span class="glyphicon glyphicon-play"></span>  See how</button>
+        </div>
+      </div>
+    </div>
+   </div>
+
+<div class="navigbar2">
+<nav class="navbar navbar-default" data-spy="affix" data-offset-top="830">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav" style="font-size:16px;">
+      <li><a href="#Overview">Overview</a></li>
+      <li><a href="#Features">Features</a></li>
+      <li><a href="#Customers">Customers</a></li>
+      <li><a href="#GetStarted">Get Started</a></li>
+      <li><a href="#Support">Support</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+
+<div id="Overview" class="container" style="text-align:center;padding-top:3%;">
+<h3 style="margin-bottom:30px;">A great way to empower your team</h3>
+<p style="margin-bottom:30px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.</p>
+ </div>
+
+<div class="carousel-inner">
+      <div class="item active">
+      <img src="http://computermechanix.net/wp-content/uploads/2016/09/products.jpg" alt="displays_pic" style="width:100%;">
+        <div class="carousel-caption">
+        <div style="text-align:center;">
+ <button type="button" class="btn btn-default" style="color:white;font-size:30px;border-radius: 100px;margin-bottom:30%;padding-left:15px;transition: all 0.5s ease;"><span class="glyphicon glyphicon-play" style="font-size:25px;"></span></button>
+</div>
+      </div>
+      </div>
+ </div>
+  <div class="row" style="background:linear-gradient(45deg, DeepSkyBlue,DodgerBlue);"">
+    <div class="col-sm-4" style="padding:40px;color:#f2f2f2;">
+      <h3 style="margin-left:20%;padding-bottom:15px;"><span class="glyphicon glyphicon-cloud" style="font-size:50px;margin-left:30%;padding-bottom:15px;"></span><br/>Lorem ipsum dolor sit amet</h3> <p style="font-size:17px;padding-left:20px;">sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+      <div class="col-sm-4" style="padding:40px;color:#f2f2f2;">
+      <h3 style="margin-left:20%;padding-bottom:15px;"><span class="glyphicon glyphicon-star-empty" style="font-size:50px;margin-left:30%;padding-bottom:15px;"></span><br/>Lorem ipsum dolor sit amet</h3> <p style="font-size:17px;padding-left:20px;">sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+       <div class="col-sm-4" style="padding:40px;color:#f2f2f2;">
+      <h3 style="margin-left:20%;padding-bottom:15px;"><span class="glyphicon glyphicon-signal" style="font-size:50px;margin-left:30%;padding-bottom:15px;"></span><br/>Lorem ipsum dolor sit amet</h3> <p style="font-size:17px;padding-left:20px;">sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+
+<div id="Features" class="container" style="text-align:center;margin-top:40px;">
+<h3 style="margin-bottom:30px;">Key Features</h3>
+</div>
+
+<div class="col-xs-12 col-sm-7 com-md-7">
+<p class="parag1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec</p>
+
+<div class="container" style="padding-left:20px;font-size:16px;margin-bottom:30px;">
+	<ul style="list-style-type:none;">
+ <li><span class="glyphicon glyphicon-ok"></span>  Feature one lorem ipsum dolor sit amet.</li><br/>
+ <li><span class="	glyphicon glyphicon-ok"></span>
+ Feature two lorem ipsum dolor sit amet.</li><br/>
+ <li><span class="	glyphicon glyphicon-ok"></span> 
+ Feature three lorem ipsum dolor sit amet.</li><br/>
+ <li><span class="	glyphicon glyphicon-ok"></span> 
+ Feature four lorem ipsum dolor sit amet.</li><br/>
+ <li><span class="	glyphicon glyphicon-ok"></span> 
+ Feature five lorem ipsum dolor sit amet.</li><br/>
+ <li><span class="	glyphicon glyphicon-ok"></span> 
+ Feature six lorem ipsum dolor sit amet.</li>
+</ul>
+</div>
+ <div class="container">
+            <div class="row">
+                <div class="features-content-wrapper col-xs-12 col-sm-7 com-md-7">
+                    <div id="reviews-carousel" class="reviews-carousel carousel slide" data-ride="carousel">
+                        <!--//wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <blockquote class="review center-block">        
+                                    <p>A great way to Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                                </blockquote><!--//review-->
+                                <div class="source">
+                                <img class="profile" src="http://beta.articlez.com/template2017/assets/images/users/user-1.png" alt="" />
+                                    <div class="name">Theresa Wood, Product Hunt</div>
+                                </div><!--//source-->
+                            </div><!--//item-->
+
+                            <div class="item">
+                                <blockquote class="review center-block">
+                                   
+                                    <p>A great way to Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                                </blockquote><!--//review-->
+                                <div class="source">      
+                                    <img class="profile" src="http://beta.articlez.com/template2017/assets/images/users/user-2.png" alt="" />
+                                    <div class="name">Rob Kim, Mashable</div>
+                                </div><!--//source-->
+                            </div><!--//item-->
+
+                            <div class="item">
+                                <blockquote class="review center-block">
+                                    
+                                    <p>A great way to Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                                </blockquote><!--//review-->
+                                <div class="source">
+                                    
+                                    <img class="profile" src="http://beta.articlez.com/template2017/assets/images/users/user-3.png" alt="" />
+                                    <div class="name">Kevin Howell, Wired</div>
+                                </div><!--//source-->
+                            </div><!--//item-->
+
+                        </div><!--//carousel-inner-->
+
+                        <!--//Indicators-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#reviews-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#reviews-carousel" data-slide-to="1"></li>
+                            <li data-target="#reviews-carousel" data-slide-to="2"></li>
+                        </ol>
+
+                    </div><!--//reviews-carousel-->
+                </div><!--//features-content-wrapper-->
+            </div><!--//row-->
+        </div><!--//container-->
+    </div>
+
+<div class="col-xs-12 col-sm-5 com-md-5">
+	<img class="imgrespond" src="http://beta.articlez.com/template2017/assets/images/imac-screen.png" height="800" alt="">
+</div>
+
+
+<div style="text-align:center;margin-bottom:30px;">
+ <button type="button" class="btn btn-info" style="padding:7px 15px;font-size:16px;transition: all 0.5s ease;" > View all features </button>
+</div>
+
+<div id="Customers"  style="text-align:center;background:#f2f2f2;padding:0 7%;">
+	<h3 style="margin-bottom:30px;padding-top:40px;">Trusted by smart businesses</h3>
+	<p style="margin-bottom:60px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum felis at lacus blandit egestas. Donec consectetur mollis leo, et pharetra massa eleifend mollis.</p>
+
+<div class="col-sm-6">
+<div class="containercard">
+  <img src="http://www.tooth-doctor.co.uk/wp-content/uploads/2016/07/nervous-dental-patient.png" alt="Avatar" class="imagecard" width="100" height="150">
+  <div class="overlay">
+    <div class="textcard"><h4 style="margin-bottom:10px;margin-top:0;">Lorem ipsum dolor sit amet</h4><p style="font-size:14px;">Lorem ipsum dolor sit amet blandit egestas.</p></div>
+  </div>
+  </div>
+<div class="containercard">
+  <img src="http://78.media.tumblr.com/80f7e5b95a6cb5054a7b31c90ca7dec1/tumblr_inline_nke0ctB1321s6kzh8.jpg" alt="Avatar" class="imagecard" width="100" height="150">
+  <div class="overlay">
+    <div class="textcard"><h4 style="margin-bottom:10px;margin-top:0;">Lorem ipsum dolor sit amet</h4><p style="font-size:14px;">Lorem ipsum dolor sit amet blandit egestas.</p></div>
+  </div>
+  </div>
+</div>
+
+  <div class="col-sm-6">
+<div class="containercard">
+  <img src="http://medariaco.com/wp-content/uploads/2014/10/mens-facelift-non-surgical2.jpg" alt="Avatar" class="imagecard" width="100" height="150">
+  <div class="overlay">
+    <div class="textcard"><h4 style="margin-bottom:10px;margin-top:0;">Lorem ipsum dolor sit amet</h4><p style="font-size:14px;">Lorem ipsum dolor sit amet blandit egestas.</p></div>
+  </div>
+</div>
+<div class="containercard">
+  <img src="http://i.dawn.com/medium/2017/09/59abbdfd0d12f.jpg" alt="Avatar" class="imagecard" width="100" height="150">
+  <div class="overlay">
+    <div class="textcard"><h4 style="margin-bottom:10px;margin-top:0;">Lorem ipsum dolor sit amet</h4><p style="font-size:14px;">Lorem ipsum dolor sit amet blandit egestas.</p></div>
+  </div>
+  </div>
+  </div>
+
+  <div style="text-align:center;padding:50px 0;">
+ <button type="button" class="btn btn-info" style="padding:7px 15px;font-size:16px;transition: all 0.5s ease;" > All Stories </button>
+</div>
+  </div>
+
+<div id="GetStarted"  class="castomers" style="height:auto;text-align:center;margin:0;padding: 7% 7%;">
+	<h2>Customers Worldwide</h2>
+	<p>START YOUR FREE TRIAL TODAY</p>
+<h3 style="text-align:center;">30 Day Free Trial</h3>
+
+<form action="/action_page.php" style="border:1px solid #ccc">
+  <div class="containerform">
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <input type="checkbox" checked="checked"> Remember me
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+</div>
+
+<div id="Support" class="supportstyle">
+	<h3 style="margin-bottom:30px;margin:0;">24/7 Customer Support</h3>
+	<p style="margin:50px 0 0 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum felis at lacus blandit egestas. Donec consectetur mollis leo, et pharetra massa eleifend mollis.</p>
+
+  <div style="text-align:center;margin:5% 0 0 0;">
+ <button type="button" class="btn btn-info" style="padding:7px 15px;font-size:16px;transition: all 0.5s ease;" > Our support center </button>
+</div>
+<div style="margin:50px 0 0 0;">
+<img src="http://beta.articlez.com/template2017/assets/images/team.png" style="width:100%;">
+</div>
+</div>
+<div class="OurApps">
+	<h3 style="margin:30px 0;color:white;">Download Our Apps</h3>
+<div style="text-align:center;margin:10px 40px;">
+ <button type="button" class="btn btn-primary" style="padding:10px 15px;font-size:18px;border:2px solid white;margin:10px 10px;transition: all 0.5s ease;" > <i class="fa fa-apple"></i> App Store </button>
+
+ <button type="button" class="btn btn-primary" style="padding:10px 15px;font-size:18px;border:2px solid white;margin:10px 10px;transition: all 0.5s ease;" > <i class="fa fa-google"></i> Google Play </button>
+
+ <button type="button" class="btn btn-primary" style="padding:10px 15px;font-size:18px;border:2px solid white;margin:10px 10px;transition: all 0.5s ease;" > <i class="fa fa-windows"></i> Windows Store </button>
+</div>
+</div>
+
+<div style="background-color:#333333;">
+<div class="col-sm-3 col-xs-6">
+<ul class="bottomCols">
+  <li><a href="#" style="color:white;">Company</a></li>
+  <li><a href="#" style="color:white;">Blog</a></li>
+  <li><a href="#" style="color:white;">Contact</a></li>
+   <li><a href="#" style="color:white;">Press</a></li>
+</ul> 
+</div>
+<div class="col-sm-3 col-xs-6">
+	<ul class="bottomCols">
+  <li><a href="#" style="color:white;">Company</a></li>
+  <li><a href="#" style="color:white;">Blog</a></li>
+  <li><a href="#" style="color:white;">Contact</a></li>
+   <li><a href="#" style="color:white;">Press</a></li>
+</ul> 
+</div>
+<div class="col-sm-3 col-xs-6">
+	<ul class="bottomCols">
+  <li><a href="#" style="color:white;">Company</a></li>
+  <li><a href="#" style="color:white;">Blog</a></li>
+  <li><a href="#" style="color:white;">Contact</a></li>
+   <li><a href="#" style="color:white;">Press</a></li>
+</ul> 
+</div>
+<div class="col-sm-3 col-xs-6">
+	<ul class="bottomCols">
+  <li><a href="#" style="color:white;">Company</a></li>
+  <li><a href="#" style="color:white;">Blog <span class="label label-success">New</span></a></li>
+  <li><a href="#" style="color:white;">Contact</a></li>
+  <li><a href="#" style="color:white;">Press</a></li>
+</ul> 
+</div>
+
+<div style="text-align:center;">
+ <button type="button" class="btn btn-default" style="padding:5px 7px;transition: all 0.5s ease;margin:2px;border:none;" > <i class="fa fa-twitter" style="font-size:16px;color:white;" ></i></button>
+
+ <button type="button" class="btn btn-default" style="padding:5px 10px;transition: all 0.5s ease;margin:2px;border:none;" > <i class="fa fa-facebook" style="font-size:16px;color:white;"></i></button>
+ 
+ <button type="button" class="btn btn-default" style="padding:5px 5px;transition: all 0.5s ease;margin:2px;border:none;" > <i class="fa fa-google-plus" style="font-size:16px;color:white;"></i></button>
+
+ <button type="button" class="btn btn-default" style="padding:5px 8px;transition: all 0.5s ease;margin:2px;border:none;"> <i class="fa fa-instagram" style="font-size:16px;color:white;"></i></button> 
+</div>
+<p class="lasbottom">Template Copyright @ 3rd Wave Media</p>
+</div>
+</body>
+</html>
