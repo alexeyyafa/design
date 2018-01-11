@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <title>video</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet'>
+<style>
+body, html {
+    height: 100%;
+    font-family: 'Antic';
+}
+* {box-sizing: border-box;}
+body {margin: 0;}
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    background: url('https://pp.userapi.com/c840139/v840139009/5da7a/lHj3W0ZDgfs.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+.content {
+    position: absolute;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+.maintitle {
+	font-size:38px;
+	padding-left:5%;
+	position:absolute;
+	letter-spacing: 5px;
+	cursor:default;
+}
+.maintitle:hover {
+	letter-spacing: 10px;
+	transition: all 1s ease;
+}
+.nexttitle {
+	font-size:45px;
+	padding-top:25%;
+	cursor:default;
+}
+.introduction {
+	font-size:55px;
+	margin:50px;
+	cursor:default;
+}
+.introduction:hover {
+	letter-spacing: 10px;
+	transition: all 1s ease;
+}
+.text {
+	margin:5% 5%;
+	font-size:25px;  
+}
+.text1 {
+	margin:5% 5%;
+	font-size:25px;  
+	text-align: justify;
+	text-indent: 50px;
+}
+.text2 {
+	margin:5% 5%;
+	font-size:25px;
+}
+.text3 {
+	margin:5% 5%;
+	font-size:25px;
+	text-align: justify;
+	text-indent: 50px;
+}
+.menubtn {
+	font-size:33px;
+	cursor:pointer;
+	position:absolute;
+	right:5%;
+}
+.menubtn2 {
+	float:right;
+	right:5%;
+	cursor:pointer;
+	font-size:33px;
+	position:relative;
+	overflow: hidden;
+}
+.menubtn:hover {
+  color: #b3b3b3;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    opacity: 0.85;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.section1 {
+	margin-top:10%;
+}
+#navbar {
+  overflow: hidden;
+  margin-top:5%;
+  z-index: 1;
+}
+
+#navbar a {
+  color: #000000;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  color: #595959;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+.naturepic {
+	max-width:50%;
+	max-height:700px;
+	height:auto;
+	margin:0 5%;
+	float:left;
+	cursor: pointer;
+}
+.naturepic:hover {
+	max-height:800px;
+	transition:all 2s ease;
+}
+.resetfloat {
+	display:table;
+    clear:both;
+}
+.winterpic {
+	max-width:70%;
+	max-height:800px;
+	height:auto;
+	float: right;
+	margin:0 5% 5% 5%;
+	cursor: pointer;
+}
+
+.winterpic:hover {
+	max-height:900px;
+	transition: all 2s ease;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.8;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-1 {
+  background-image: url("https://pp.userapi.com/c834101/v834101662/70af5/IYAR_p-EATs.jpg");
+  min-height: 100%;
+}
+.bgimg-2 {
+  background-image: url("https://pp.userapi.com/c831309/v831309662/2b48a/1K2Ipb1_C-Q.jpg");
+  min-height: 350px;
+}
+
+.bgimg-3 {
+  background-image: url("https://pp.userapi.com/c831309/v831309662/2b476/ehmIAFdN1kY.jpg");
+  min-height: 350px;
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  color: #fff;
+  padding: 10px;
+  font-size: 45px;
+  letter-spacing: 5px;
+  cursor:default;
+}
+@media screen and (max-width: 750px) {
+  .sidenav {padding-top: 55px;}
+  .sidenav a {font-size: 22px;}
+  .maintitle {font-size:30px;letter-spacing:0;}
+  .nexttitle {padding-top:55%;font-size:30px;}
+  .menubtn {font-size:28px;}
+  .section1 {margin-top:100px;}
+  .introduction {font-size:35px;}
+  .text {font-size:25px;margin:30px;}
+  .text1 {font-size:20px;margin:30px;}
+  .text2 {font-size:20px;margin:30px;}
+  .text3 {font-size:20px;margin:30px;}
+  .caption span.border {font-size: 28px;}
+  .introduction:hover {letter-spacing: 0;}
+  .maintitle:hover {letter-spacing: 0;}
+  .naturepic {margin-bottom:20px;}
+}
+#textapr { 
+  opacity:0;
+} 
+#textapr2 { 
+  opacity:0;
+} 
+#textapr3 { 
+  opacity:0;
+} 
+@keyframes mymove {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes mymovedown {
+    from {opacity: 0;}
+    to {opacity: 0;}
+}
+</style>
+</head>
+<body>
+<video autoplay muted loop id="myVideo">
+  <source src="Minsk.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content" id="Welcome">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#Welcome">Welcome</a>
+  <a href="#About">About us</a>
+  <a href="#Contact">Contact us</a>
+</div>
+  <p class="maintitle">Welcome friend</p>
+<p class="menubtn" onclick="openNav()">&#9776;</p>
+
+  <p class="nexttitle">- We are really welcome you here</p>
+</div>
+
+
+<div style="width:90vw;height:90vh">
+</div>
+
+<div id="navbar">
+  <a href="javascript:void(0)" class="menubtn2" onclick="openNav()">&#9776;</a>
+</div>
+
+<div class="section1" id="About">
+    <p class="introduction" id="aboutapr">About us</p>
+    <img src="https://pp.userapi.com/c841523/v841523595/4f498/tLcOB82mjIE.jpg" alt="naturepic" class="naturepic">
+  <p class="text1" id="textapr">Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+
+<div class="resetfloat"></div>
+  <p class="text2" id="textapr2">Lorem ipsum dolor sit amet, an his etiam torquatos. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+
+<div>
+<img src="https://pp.userapi.com/c841523/v841523595/4f4a2/HhSJyZc_1gU.jpg" alt="winterpic" class="winterpic"> 
+</div>
+
+   <p class="text3" id="textapr3">Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+</div>
+<div class="resetfloat"></div>
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;padding:30px 10px;">
+     <p class="introduction" id="Contact">Contact us</p>
+  </div>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:35px;color: #ffffff;">We are great</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:30px 10px;">
+    <p class="text">Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo.</p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:35px;color: #f7f7f7;">Thank you for your support</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:30px 10px;;">
+    <p class="text">Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo.</p>
+  </div>
+</div>
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border">GOOD BYE!</span>
+  </div>
+</div>
+
+
+
+<script>
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+window.onscroll = function() {scrollFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function scrollFunction() {
+    if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
+        document.getElementById("textapr").style.animation = "mymove 4s linear forwards";
+        document.getElementById("aboutapr").style.letterSpacing = "8px";
+        document.getElementById("aboutapr").style.textDecoration = "overline";
+        document.getElementById("aboutapr").style.transition = "all 6s ease";
+    } else {
+        document.getElementById("textapr").style.animation = "mymovedown 1s linear forwards";
+        document.getElementById("aboutapr").style.letterSpacing = "0px";
+        document.getElementById("aboutapr").style.transition = "all 1s ease";
+    }
+
+    if (document.body.scrollTop > 950 || document.documentElement.scrollTop > 950) {
+        document.getElementById("textapr2").style.animation = "mymove 4s linear forwards";
+    } else {
+        document.getElementById("textapr2").style.animation = "mymovedown 1s linear forwards";
+    }
+
+    if (document.body.scrollTop > 1290 || document.documentElement.scrollTop > 1290) {
+        document.getElementById("textapr3").style.animation = "mymove 4s linear forwards";
+    } else {
+        document.getElementById("textapr3").style.animation = "mymovedown 1s linear forwards";
+    }
+
+    if (document.body.scrollTop > 2150 || document.documentElement.scrollTop > 2150) {
+        document.getElementById("Contact").style.letterSpacing = "5px";
+        document.getElementById("Contact").style.textDecoration = "overline";
+        document.getElementById("Contact").style.transition = "all 6s ease";
+    } else {
+        document.getElementById("Contact").style.letterSpacing = "0px";
+        document.getElementById("Contact").style.transition = "all 1s ease";
+    }
+
+    if (window.pageYOffset >= sticky) {
+       navbar.classList.add("sticky")
+    } else {
+       navbar.classList.remove("sticky");
+    }
+}
+ 
+
+
+
+
+</script>
+</body>
+</html>
+
+
+<!-- 
+
+{myFunction()}
+ -->
