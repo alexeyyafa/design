@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qulix</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+	margin: 0;
+    background: #f2f4f8;
+}
+.navbar {
+	background: #2d313d;
+	margin:0;
+}
+@media (min-width:768px){.container{width:100%}}
+@media (min-width:992px){.container{width:100%}}
+@media (min-width:1200px){.container{width:100%}}
+.container.main {
+	background: white;
+	max-width:960px;
+	margin:auto;
+	padding:0;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.nav.navbar-nav.navbar-right.navigbar1 li a  {
+   color:#727989; 
+}
+.nav.navbar-nav.navbar-right.navigbar1 li a:hover,.nav.navbar-nav.navbar-right.navigbar1 li a:active,.nav.navbar-nav.navbar-right.navigbar1 li a:focus  {
+   background: none; 
+   color:white;
+}
+.column {
+    float: left; 
+    background: #fcfdfe;
+}
+.left {
+  width: 18%;
+  border-right: 1px solid rgba(0, 0, 0, 0.19);
+}
+.right {
+  width: 82%;
+}
+.tab {
+    float: left;
+    width: 100%;
+    margin-top:20px;
+}
+.tab button {
+    display: block;
+    width: 100%;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 17px;
+    margin:0;
+}
+.tab button:hover {
+    border-left: 5px solid #99a1b3;
+    color: #333333;
+}
+button.tablinks {
+	font-size:14px;
+	padding:5px 25px;
+	background: #fcfdfe;	
+}
+.tablinks {
+	color:#99a1b3;
+}
+.tablinks.submenu {
+	padding-top:20px;
+	font-size:17px;
+	color: #333333;
+}
+.btn.btn-default {
+	border:1px solid grey;
+	margin-bottom: 30px;
+}
+.footer-btns {
+	text-align: center;
+}
+.bottomCols {
+	float:left;
+    padding: 10px 0;
+}
+.bottomCols a {
+	padding-left:20px;
+    color: #99a1b3;
+    font-size: 12px;
+}
+.resetfloat {
+    content: "";
+    clear: both;
+    display: table;
+}
+.lastfooter {
+	padding: 15px 20px;
+	color: #99a1b3;
+	font-size: 12px;
+	border: 1px solid white;
+}
+.page-footer {
+	background: #f2f4f8;
+	margin:0;
+	padding:0;
+}
+.row.columnn {
+	margin:0;
+}
+.pagetitle {
+    padding-left:25px;
+    font-size:35px;
+    font-family: "Times New Roman"
+}
+.cont {
+    border-radius: 5px;
+    padding: 10px;
+    margin:15px 10px;
+}
+.cont::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.contp {
+	text-align: justify;
+}
+.cont img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 5%;
+}
+.rightcont {
+    float: right;
+    color: #aaa;
+}
+.leftcont {
+    float: left;
+    color: #999;
+    font-size: 11px;
+    margin-left:80px;
+}
+.conttitle {
+	font-size: 17px;
+	margin-bottom: 0;
+	color: #0099ff;
+}
+.icon-bar {
+	background:white;
+}
+.navigat2 {
+    overflow: hidden;
+    background: #646d81;
+}
+.navigat2 a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 0;
+    margin:0 16px;
+    text-decoration: none;
+    font-size: 15px;
+    max-width:960px;
+}
+.navigat2 a:hover {
+     border-top: 5px solid white;
+}
+.titledropbtn {
+    padding: 8px;
+    border: none;
+}
+.titledropdown {
+    position: relative;
+    display: inline-block;
+}
+.titledropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size:18px;
+}
+.titledropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.titledropdown-content a:hover {color: grey}
+.titledropdown:hover .titledropdown-content {
+    display: block;
+}
+.titledropdown:hover .titledropbtn {
+    color: grey;
+}
+.navigat3 {
+  overflow: hidden;
+  background-color: #f2f4f8;
+}
+.navigat3 a {
+  float: right;
+  display: block;
+  color:#99a1b3;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.navigat3 a:hover {
+  color: black;
+}
+.navigat3 .search-container {
+  float: left;
+  margin-left:20px;
+}
+.navigat3 input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 16px;
+  border: none;
+}
+.navigat3 .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.navigat3 .navi3hide {display:none;font-size:16px}
+
+@media screen and (max-width: 640px) {
+  .navigat3 .search-container {display:none;}
+  .navigat3 .navi3plus {display:none;}
+  .navigat3 .navi3hide {display:block;}
+}
+@media screen and (max-width: 896px) {
+	.left {width: 20%;}
+	.right {width: 80%;}
+}
+@media screen and (max-width: 805px) {
+	.left {width: 22%;}
+	.right {width: 78%;}
+}
+@media screen and (max-width: 780px) {
+	.container.main {width:100%;margin:0;padding:0;}
+}
+@media screen and (max-width: 734px) {
+	.left {width: 30%;}
+	.right {width: 70%;}
+}
+@media screen and (max-width: 640px) {
+	.leftcont {margin-left:0;}
+	.navigat2 {display:none;}
+	.left {display:none;}
+	.right {width: 100%;}
+    .pagetitle {font-size:32px;text-align: center;}
+    input[type=search] {display:none;}
+    .lastfooter {display:none;}
+    .bottomCols a {margin:2px;padding-left:10px}
+    .right {height:auto;}
+    .contp {font-size:14px;}
+    .cont img { max-width: 60px;margin-right: 10px;}
+    .rightcont {display:none;}
+    .btn.btn-default {margin:0 30px 30px 30px;}
+}
+</style>
+</head>
+<body>
+ <nav class="navbar">
+  <div class="container-fluid" style="max-width:960px;">
+    <div class="navbar-header ">
+    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>  
+    <a class="navbar-brand" href="#"><img src="logo.png" alt="logo"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav navbar-right navigbar1">
+     <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="border-bottom: 1px dashed;padding-bottom:0;">New York </span>
+      <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1</a></li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><span class="glyphicon glyphicon-bell" style="font-size:20px;"></span></a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-envelope" style="font-size:20px;"></span></a></li>
+      <li><a href="#">User name <img src="Layer393.png" alt="avatar"></a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-search" style="font-size:20px;"></span></a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+<div class="container-fluid" style="background:#646d81;"> 
+<div class="container" style="max-width:960px;padding:0;">   
+<div class="navigat2">
+  <a href="#menuitem">Menu item</a>
+  <a href="#menuitem">Menu item</a>
+  <a href="#menuitem">Menu item</a>
+  <a href="#menuitem">Menu item</a>
+  <a href="#menuitem">Menu item</a>
+</div>
+</div>
+</div>
+
+<div class="container main">
+<div class="row columnn">
+  <div class="column left">
+   <div class="tab">
+  <button class="tablinks">Submenu item 7d</button>
+  <button class="tablinks">Submenu item 5d</button>
+  <button class="tablinks submenu">Submenu</button>
+  <button class="tablinks">Submenu item 7d</button>
+  <button class="tablinks">Submenu item 2d</button>
+  <button class="tablinks">Submenu item 4d</button>
+  <button class="tablinks">More tags</button>
+  <button class="tablinks submenu">Submenu</button>
+  <button class="tablinks">Submenu item 1d</button>
+  <button class="tablinks">Submenu item 1d</button>
+  <button class="tablinks submenu">Submenu</button>
+  <button class="tablinks">Submenu item 4d</button>
+  <button class="tablinks">Submenu item 2d</button>
+  <button class="tablinks">Submenu item1 &amp; Submenuitem2 2d</button>
+  <button class="tablinks">Submenu item 7d</button>
+  <button class="tablinks">Submenu item 1d</button>
+  <button class="tablinks">Submenu item 1d</button>
+  <button class="tablinks submenu">Submenu</button>
+  <button class="tablinks">Submenu item 2d</button>
+  <button class="tablinks">Submenu item 1d</button>
+  <button class="tablinks">Submenu item 3d</button>
+</div>
+</div>
+
+<div class="column right" style="background-color:#ffffff;">
+
+<h2 class="pagetitle">Page title in <span style="border-bottom: 1px dashed;margin-left:20px;">
+<div class="titledropdown">
+  <div class="titledropbtn"> New York <i class="fa fa-angle-down"></i> </div>
+  <div class="titledropdown-content">
+    <a href="#">Page 1</a>
+    <a href="#">Page 2</a>
+    <a href="#">Page 3</a>
+  </div>
+</div>
+</span></h2>
+
+<div class="navigat3">
+    <a href="#"><i class="fa fa-exchange" style="font-size:20px"></i></a>
+    <a href="#" class="navi3plus" style="margin-right:40px;"><span class="glyphicon glyphicon-plus"></span> New item</a>
+    <a href="#" class="navi3hide"><span class="glyphicon glyphicon-plus"></span></a>
+    <a href="#" class="navi3hide" style="float: left;"><span class="glyphicon glyphicon-search"></span></a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+<div class="cont">
+  <img src="Layer352.png" alt="Avatar" style="width:100%;">
+  <p class="conttitle">Item title 1</p>
+  <p class="contp">Class aptent taciti sociosqu ad litora to User name Item tile 2 Class Nam nec tell accumsan ipsum velit.Nam nec tell Morbi accumsan ipsum velit. Nam nec tell Morbi accumsan ipsum veli</p>
+  <span class="leftcont">tag1, tag2, tag3</span><span class="rightcont">11:00</span>
+</div>
+<div class="cont">
+  <img src="Layer396.png" alt="Avatar" style="width:100%;">
+  <p class="conttitle">Item title 2</p>
+  <p class="contp">User name Item tile 2 Class aptent taciti sociosqu ad litora to User name Item tile 2 Class Nam nec tell Morbi accumsan ipsum velit. Nam nec tell Morbi accumsan ipsum veli</p>
+  <span class="leftcont">tag1, tag2, tag3</span><span class="rightcont">11:02</span>
+</div>
+<div class="cont">
+  <img src="Layer397.png" alt="Avatar" style="width:100%;">
+  <p class="conttitle">Item title 3</p>
+  <p class="contp">User name Item tile 2 Class aptent taciti sociosqu ad litora to User name Item tile 2 Class aptent tac Nam nec tell Morbi accumsan ipsum velit. Nam nec tell Morbi accumsan ipsum veli</p>
+  <span class="leftcont">tag1, tag2, tag3</span><span class="rightcont">11:05</span>
+</div>
+<div class="cont">
+  <img src="Layer398.png" alt="Avatar" style="width:100%;">
+  <p class="conttitle">Item title 4</p>
+  <p class="contp">User name Item tile 2 Class aptent taciti sociosqu ad litora to User name Item tile 2 Class aptent Nam nec tell Morbi accumsan ipsum velit. Nam nec tell Morbi accumsan ipsum veli</p>
+  <span class="leftcont">tag1, tag2, tag3</span><span class="rightcont">11:05</span>
+</div>
+
+<div class="footer-btns">
+ <button type="button" class="btn btn-default" style="padding:10px"> <span class="glyphicon glyphicon-menu-left"></span> Previous</button>
+<button type="button" class="btn btn-default" style="padding:10px"> Next <span class="glyphicon glyphicon-menu-right"></span></button>
+</div>
+
+<footer class="page-footer">
+<div class="bottomCols">
+  <a href="#">About</a>
+  <a href="#">Policies</a>
+  <a href="#">Site Map</a>
+  <a href="#">Help</a>
+  <a href="#">Contact us</a>                    
+</div> 
+<div class="resetfloat"></div>
+ <p class="lastfooter"><span><img src="Vectorcopy.png" alt="logofooter"></span> © 2015. Qulix Systems. All rights reserved.<p>
+</footer>
+
+  </div>
+</div>
+</div>
+</body>
+</html>
