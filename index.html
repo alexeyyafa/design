@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <title>LAMBDA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+@font-face {
+    font-family: YesevaOne-Regular; 
+    src: url(fonts/YesevaOne-Regular_v2.otf);
+}
+@font-face {
+    font-family: Lato-Regular; 
+    src: url(fonts/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: Lato-Light; 
+    src: url(fonts/Lato-Light.ttf);
+}
+@font-face {
+    font-family: GenBasR; 
+    src: url(fonts/GenBkBasR.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin:0;
+}
+body {
+  margin: 0;
+  font-family: "YesevaOne-Regular", serif;
+  background: url("img/pattern.png");
+}
+.promo-section {
+	background: url("img/Bg.png");
+	background-color: grey;
+	height:750px;
+}
+.navbar-logo {
+	float:left;
+	margin-top:45px;
+	margin-left:175px;
+	color:white;
+}
+.navbar-logo:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.navbar-right {
+	float:right;
+	padding-top:40px;
+	margin-right: 210px;
+}
+.navbar-right:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.navbar-right a {
+	text-decoration: none;
+	color:white;
+	font-weight: 100;
+}
+.navbar-menubtn {
+	margin-left:30px;
+	font-size:18px;
+	padding:40px 10px 0 10px;
+}
+.navbar-menubtn:hover, .navbar-menubtn:active {
+	border-top: 5px solid rgba(255, 255, 255, 0.8);
+}
+.navbar-socialbtn {
+	padding:0 5px;
+	font-size:22px;
+}
+.navbar-socialbtn i {
+	color: #dab33e;
+}
+.navbar-socialbtn i:hover {
+	color: #cc9900;
+}
+header {
+	height: 120px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.01));
+}
+.mainContainer {
+	width:1600px;
+	height: auto;
+	background: black;
+	margin:0 auto;
+}
+.promo-heading {
+	padding-top: 220px;
+	font-size:90px;
+	font-weight: 100;
+	color:white;
+	text-align: center;
+	text-shadow: 1px 1px 1px black;
+}
+.decoration {
+	top: 470px;
+	left: 0;
+	right: 0;
+	margin-left: 680px;
+	margin-top: 25px;
+}
+.mainbtns {
+	text-align: center;
+	top: 540px;
+	left: 0;
+	right: 0;
+	margin: 30px auto;
+}
+.btn {
+    background-color: white;
+    color: white;
+    padding: 14px 28px;
+    font-size: 18px;
+    cursor: pointer;
+	width:225px;
+	height:55px;
+	font-family: "Lato-Regular";
+}
+.book{
+	background-color: rgba(0, 0, 0, 0.5);
+	border: 1px solid black;
+}
+.menu{
+	margin-left:30px;
+	background-color: rgba(255, 255, 255, 0.3);
+	border: 1px solid white;
+}
+.book:hover{
+	background-color: rgba(0, 0, 0, 0.9);
+	transition: all 1s ease;
+}
+.menu:hover{
+	background-color: rgba(255, 255, 255, 0.7);
+	transition: all 1s ease;
+	color: black;
+}
+
+/* ABOUT SECTION */
+
+.about-section {
+	background: url("img/pattern.png");
+	background-color: white;
+	height:710px;
+}
+.about-container {
+	left: 0;
+	right: 0;
+	margin: 0 270px;
+}
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.about-heading {
+	font-size: 36px;
+	margin-top: 90px;
+	font-weight: 100;
+	color: #cc9900;
+	text-align: center;
+	padding:0 70px;
+	margin-bottom: 0;
+}
+.about-devider {
+	left: 0;
+	right: 0;
+	margin: 10px 120px;
+}
+.about-paragraph {
+	text-align:center;
+	margin:0 30px 60px 30px;
+	font-family: "GenBasR";
+	font-size: 18px;
+	line-height: 1.4;
+}
+.cook {
+	left: 0;
+	right: 0;
+	margin: 0 170px;
+}
+.dish {
+	left: 0;
+	right: 0;
+	margin: 40px 0;
+}
+
+/* INGREDIENTS SECTION */
+
+.ingredients-section {
+	background: url("img/ingredientsbg.png");
+	background-color: black;
+	height:755px;
+}
+.ingredients-heading {
+	font-size: 36px;
+	margin-top: 90px;
+	font-weight: 100;
+	color: white;
+	text-align: center;
+	padding:60px 70px 0 70px;
+	margin-bottom: 0;
+}
+.ingredients-devider {
+	left: 0;
+	right: 0;
+	margin: 15px 165px;
+}
+.ingredients-container {
+	margin-top:0;
+	height:550px;
+	width:570px;
+	background: rgba(0, 0, 0, 0.5);
+}
+.ingredients-paragraph {
+	text-align:center;
+	margin:0 45px;
+	font-family: "GenBasR";
+	font-size: 18px;
+	line-height: 1.4;
+	color:white;
+}
+.ingredients1 {
+	left: 0;
+	right: 0;
+	margin-left: 80px;
+	margin-top: 80px;
+	border-radius: 50%;
+}
+.ingredients2 {
+	left: 0;
+	right: 0;
+	margin-left: 30px;
+	border-radius: 50%;
+}
+.ingredients3 {
+	left: 0;
+	right: 0;
+	margin-left: 30px;
+	border-radius: 50%;
+}
+
+/* MENU SECTION */
+
+.menu-section {
+	background: url("img/pattern.png");
+	background-color: white;
+	height:1000px;
+}
+.menu-heading {
+	font-size: 36px;
+	font-weight: 100;
+	color: #cc9900;
+	text-align:center;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	margin-top: 90px;
+}
+.menu-devider {
+	left: 0;
+	right: 0;
+	margin: 10px 135px 0 135px;
+	padding-bottom:0;
+}
+.menu-small-heading {
+	font-size: 22px;
+	font-weight: 100;
+	color: #cc9900;
+	margin: 7px 0 0 0;
+	margin:5px 0 0 0;
+}
+.menu-price {
+	float:right;
+}
+.menu-position-cuntainer {
+	border-bottom: 1px solid rgba(204, 153, 0, 0.3);
+	margin-top:35px;
+	padding-bottom: 7px;
+	margin-right: 100px;
+}
+.menu-paragraph {
+	font-family: "Lato-Regular";
+	margin-top: 10px;
+}
+
+/* REVIEWS SECTION */
+
+.reviews-section {
+	background: url("img/reviewsbg.png");
+	background-color: black;
+	height:760px;
+}
+.reviews-container {
+	position:absolute;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	height: 555px;
+	width: 770px;
+	margin:0 auto;
+	margin-top:100px;
+}
+.reviews-heading {
+	font-size: 36px;
+	font-weight: 100;
+	color: white;
+	text-align: center;
+	padding: 70px 0 0 0;
+	margin-bottom: 0;
+}
+.reviews-devider {
+	left: 0;
+	right: 0;
+	margin: 15px 260px;
+}
+.reviews-paragraph {
+	text-align: center;
+	margin: 0;
+	font-family: "GenBasR";
+	font-size: 25px;
+	line-height: 2;
+	color: white;
+	padding:0 90px;
+}
+.reviews-paragraph-small {
+	color: white;
+	text-align: center;
+	font-family: "Lato-Regular";
+	font-weight: 100;
+	font-size: 18px;
+	padding-top: 30px;
+}
+
+/* RESERVATIONS SECTION */
+
+.reservations-section {
+	background: url("img/pattern.png");
+	background-color: white;
+	height:710px;
+	margin:0;
+}
+.reservations-container {
+	left: 0;
+	right: 0;
+	margin: 0 215px;
+}
+.reservations-heading {
+	font-size: 36px;
+	margin-top: 80px;
+	font-weight: 100;
+	color: #cc9900;
+	text-align: center;
+	padding:0 0;
+	margin-bottom: 0;
+}
+.devider {
+	left: 0;
+	right: 0;
+	margin: 10px 160px;
+}
+.reservations-paragraph {
+	text-align:center;
+	margin:10px 50px 0 30px;
+	font-family: "GenBasR";
+	font-size: 18px;
+	line-height: 1.4;
+}
+.reservation1 {
+	left: 0;
+	right: 0;
+	margin: 90px 0;
+}
+.reservation2 {
+	left: 0;
+	right: 0;
+	margin: 90px 0;
+	float:right;
+}
+.reservation2:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+form {
+	margin:0;
+	margin-left:35px;
+	font-family: "GenBasR";
+	font-size:18px;
+}
+input[type=text], select, input[type=email], input[type=date] {
+	width:195px;
+    padding: 10px 20px;
+    margin: 8px 0;
+    display: inline;
+    border: 1px solid #ccc;
+    font-family: "GenBasR";
+    font-weight: 100;
+	font-size:16px;
+	transition: 0.5s;
+    outline: none;
+}
+input[type=text]:focus, select:focus, input[type=email]:focus, input[type=date]:focus { 
+	border: 1px solid #c9a131;
+}
+input[type=submit] {
+	width:200px;
+    background-color: #c9a131;
+    color: white;
+    padding: 7px 20px;
+    margin: 8px 0;
+    margin-left: 140px;
+    border: none;
+    cursor: pointer;
+    font-family: "GenBasR";
+    font-weight: 100;
+	font-size:18px;
+}
+input[type=submit]:hover {
+    background-color: #cc9900;
+}
+label {
+	color: #cc9900;
+}
+
+/* FOOTER SECTION */
+
+footer {
+    background: #191919;
+    bottom: 0;
+    width:1600px;
+    color:white;
+	height: 320px;
+}
+.footer-container {
+	left: 0;
+	right: 0;
+	margin: 0 220px;
+}
+.footer-column {
+    float: right;
+    width: 33%;
+    padding: 5px;
+}
+.footer-heading {
+	font-size: 20px;
+	font-weight: 100;
+	color: white;
+	text-align: center;
+	padding: 50px 0 0 0;
+	margin-bottom: 0;
+}
+.footer-devider {
+	left: 0;
+	right: 0;
+	margin: 15px auto;
+	margin-left: 85px;
+	text-align: center;
+}
+.footer-paragraph {
+	font-family: "Lato-Light";
+    font-weight: 100;
+    font-size:18px;
+    text-align: center;
+}
+.cards {
+	left: 0;
+	right: 0;
+	margin-left: 120px;
+	margin-top: 30px;
+}
+.footerbtns {
+	margin-left: 150px;
+	margin-top: 25px;
+}
+.footer-socialbtn {
+	padding:0 5px;
+	font-size:16px;
+	color:white;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="mainContainer">
+
+<section class="promo-section">
+<header>
+ <nav class="navbar">
+ <a class="navbar-logo" href="#"><img src="img/Logo - Text.png" alt="logo"></a>
+ <nav class="navbar-right">
+    	<a class="navbar-menubtn" href="#">Home</a>
+    	<a class="navbar-menubtn" href="#">About</a>
+    	<a class="navbar-menubtn" href="#">Ingredients</a>
+    	<a class="navbar-menubtn" href="#">Menu</a>
+        <a class="navbar-menubtn" href="#">Reviews</a>
+        <a class="navbar-menubtn" href="#">Reservations</a>
+        <a class="navbar-socialbtn" href="#"><i class="fa fa-twitter"></i></a>
+        <a class="navbar-socialbtn" href="#"><i class="fa fa-youtube"></i></a>
+        <a class="navbar-socialbtn" href="#"><i class="fa fa-facebook"></i></a>
+</nav>
+</nav>
+</header>
+
+<h1 class="promo-heading">the right ingredients<br>for the right food</h1> 
+
+<img class="decoration" src="img/Decoration.png" alt="decoration">
+
+<div class="mainbtns">
+<button class="btn book">BOOK A TABLE</button>
+<button class="btn menu">SEE THE MENU</button>
+</div>
+</section>
+
+<!-- ABOUT SECTION -->
+
+<section class="about-section">
+<div class="about-container">
+<div class="row">
+<div class="column">
+<h1 class="about-heading">Just the right food</h1> 
+<img class="about-devider" src="img/Devider.png" alt="devider">
+<p class="about-paragraph">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
+<img class="cook" src="img/cook.png" alt="cook">
+</div>
+<div class="column">
+<img class="dish" src="img/dish.png" alt="dish">
+</div>
+</div>
+</div>
+</section>
+
+<!-- INGREDIENTS SECTION -->
+
+<section class="ingredients-section">
+<div class="row">
+<div class="column">
+</div>
+<div class="column">
+<div class="ingredients-container">
+<h1 class="ingredients-heading">Fine ingredients</h1> 
+<img class="devider ingredients-devider" src="img/Dividerwhite.png" alt="devider">
+<p class="ingredients-paragraph">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
+<img class="ingredients1" src="img/ingredients1.png" alt="ingredients1">
+<img class="ingredients2" src="img/ingredients2.png" alt="ingredients2">
+<img class="ingredients3" src="img/ingredients3.png" alt="ingredients3">
+</div>
+</div>
+</div>
+</section>
+
+<!-- MENU SECTION -->
+
+<section class="menu-section">
+<div class="about-container">
+<div class="row">
+<div class="column">
+<h1 class="menu-heading">Appetisers</h1> 
+<img class="menu-devider" src="img/Devider.png" alt="devider">
+<div class="menu-position-cuntainer">
+<h3 class="menu-small-heading">Tzatsiki<span class="menu-small-heading menu-price">$3.99</span>
+</h3></div>
+<p class="menu-paragraph">Refreshing traditional cucumber and garlic yoghurt dip.</p>
+<div class="menu-position-cuntainer">
+<h3 class="menu-small-heading">Aubergine Salad<span class="menu-small-heading menu-price">$5.50</span>
+</h3></div>
+<p class="menu-paragraph">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+<div class="menu-position-cuntainer">
+<h3 class="menu-small-heading">Aubergine Salad<span class="menu-small-heading menu-price">$5.25</span>
+</h3></div>
+<p class="menu-paragraph">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+
+<h1 class="menu-heading">Salads</h1> 
+<img class="menu-devider" src="img/Devider.png" alt="devider">
+<div class="menu-position-cuntainer">
+<h3 class="menu-small-heading">Olive Special<span class="menu-small-heading menu-price">$5.99</span>
+</h3></div>
+<p class="menu-paragraph">Refreshing traditional cucumber and garlic yoghurt dip.</p>
+<div class="menu-position-cuntainer">
+<h3 class="menu-small-heading">Greek Salad<span class="menu-small-heading menu-price">$5.50</span>
+</h3></div>
+<p class="menu-paragraph">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+<div class="menu-position-cuntainer">
+<h3 class="menu-small-heading">Gusto Salad<span class="menu-small-heading menu-price">$5.25</span>
+</h3></div>
+<p class="menu-paragraph">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+
+</div>
+<div class="column">
+<h1 class="menu-heading">Starters</h1> 
+<img class="menu-devider" src="img/Devider.png" alt="devider">
+<div class="menu-position-cuntainer">
+<h3 class="menu-small-heading">Haloumi<span class="menu-small-heading menu-price">$5.99</span>
+</h3></div>
+<p class="menu-paragraph">Refreshing traditional cucumber and garlic yoghurt dip.</p>
+<div class="menu-position-cuntainer">
+<h3 class="menu-small-heading">Spinach Pie<span class="menu-small-heading menu-price">$5.50</span>
+</h3></div>
+<p class="menu-paragraph">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+
+<h1 class="menu-heading">Main Dishes</h1> 
+<img class="menu-devider" src="img/Devider.png" alt="devider">
+<div class="menu-position-cuntainer">
+<h3 class="menu-small-heading">Cornish Mackerel<span class="menu-small-heading menu-price">$5.99</span>
+</h3></div>
+<p class="menu-paragraph">Refreshing traditional cucumber and garlic yoghurt dip.</p>
+<div class="menu-position-cuntainer">
+<h3 class="menu-small-heading">Roast Lamb<span class="menu-small-heading menu-price">$5.50</span>
+</h3></div>
+<p class="menu-paragraph">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+<div class="menu-position-cuntainer">
+<h3 class="menu-small-heading">Fried Chicken<span class="menu-small-heading menu-price">$5.25</span>
+</h3></div>
+<p class="menu-paragraph">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+<div class="menu-position-cuntainer">
+<h3 class="menu-small-heading">Pastitsio<span class="menu-small-heading menu-price">$5.99</span>
+</h3></div>
+<p class="menu-paragraph">Refreshing traditional cucumber and garlic yoghurt dip.</p>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- REVIEWS SECTION -->
+
+<section class="reviews-section">
+<div class="reviews-container">
+<h1 class="reviews-heading">Guest Reviews</h1> 
+<img class="reviews-devider" src="img/Dividerwhite.png" alt="devider">
+<p class="reviews-paragraph">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</p>
+<p class="reviews-paragraph-small">- food inc, New York</p>
+</div>
+</section>
+
+<!-- RESERVATIONS SECTION -->
+
+<section class="reservations-section">
+<div class="reservations-container">
+<div class="row">
+<div class="column">
+<img class="reservation1" src="img/reservation2.png" alt="fooddish1">
+<img class="reservation2" src="img/reservation1.png" alt="fooddish2">
+</div>
+<div class="column">
+<h1 class="reservations-heading">Just the right food</h1> 
+<img class="devider" src="img/Devider.png" alt="devider">
+<p class="reservations-paragraph">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more.<br> Perfect materials and freshly baked food.<br><br>
+Delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.</p><br>
+
+<form action="/action_page.php">
+<div class="row">
+<div class="column">
+      <label for="name">Name</label><br>
+      <input type="text" id="name" name="name" placeholder="your name *" required><br>
+      <label for="date">Date</label><br>
+      <input type="date" id="date" name="date" placeholder="date *" required><br>
+</div>
+<div class="column">
+      <label for="user-email">E-mail</label><br>
+      <input type="email" id="user-email" name="user-email" placeholder="your email *" required><br>
+      <label>
+      Party number<br>
+      <select name="quantity" required>
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </label>
+    </div>
+</div>
+	<input type="submit" name="submit" value="Book now!">
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER SECTION -->
+
+<footer class="page-footer">
+<div class="footer-container">
+<div class="row">
+<div class="footer-column">
+<h3 class="footer-heading">Our Location</h3>
+<img class="footer-devider" src="img/footer-devider.png" alt="devider">
+<p class="footer-paragraph"><strong>19th Paradise Street Sitia<br>
+128 Meserole Avenue</strong></p><br>
+<div class="footerbtns">
+<a class="footer-socialbtn" href="#"><i class="fa fa-facebook"></i></a>
+<a class="footer-socialbtn" href="#"><i class="fa fa-youtube"></i></a>
+<a class="footer-socialbtn" href="#"><i class="fa fa-twitter"></i></a>
+</div>
+</div>
+
+<div class="footer-column">
+<h3 class="footer-heading">Opening Hours</h3>
+<img class="footer-devider" src="img/footer-devider.png" alt="devider">
+<p class="footer-paragraph"><strong>Mon-Thu:</strong> 7:00am-8:00pm<br>
+<strong>Fri-Sun:</strong> 7:00am-10:00pm</p>
+<br>
+<img class="cards" src="img/cards.png" alt="cards">
+</div>
+
+<div class="footer-column">
+<h3 class="footer-heading">About Us</h3>
+<img class="footer-devider" src="img/footer-devider.png" alt="devider">
+<p class="footer-paragraph">Lambda's new and expanded Chelsea location represents a truly authentic <strong>Greek</strong> patisserie, featuring breakfasts of fresh croissants and steaming bowls of café.<br>
+Lamda the best restaurant in town</p>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>
