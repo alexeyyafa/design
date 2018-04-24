@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>alexey_yafa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="shortcut icon" href="https://78.media.tumblr.com/d21d890bb04d89d6a4e50a9180afb239/tumblr_inline_n07y5sMGfN1rdsa2v.png">
+<style>
+@font-face {
+  font-family: OpenSans-Light; 
+  src: url(fonts/OpenSans-Light.ttf);
+}
+@font-face {
+  font-family: Raleway-Light; 
+  src: url(fonts/Raleway-Light.ttf);
+}
+@font-face {
+  font-family: Raleway-ExtraLight; 
+  src: url(fonts/Raleway-ExtraLight.ttf);
+}
+@font-face {
+  font-family: Raleway-Thin; 
+  src: url(fonts/Raleway-Thin.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "OpenSans-Light", sans-serif;
+}
+.typography-example {
+  font-family: "OpenSans-Light", sans-serif; 
+  margin: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  background-size: cover;
+  background-image: linear-gradient(130deg, #ff9adb, #61a0ff); 
+  background-color: #ff80aa;
+  color: #fff;
+  padding-top: 250px;
+  text-align: center;
+  letter-spacing: .12em;
+  font-size: 6.854em;
+  user-select:none;
+  opacity: 0.9;
+}
+.typography-example,
+.typography-example * {
+  cursor: default;
+}
+.typography-example:before {
+  position: absolute;
+}
+.typography-example span {
+  opacity: 0;
+  animation: fadeIn 4s forwards;
+}
+.typography-smallheader {
+  font-size: 0.382em;
+  letter-spacing: .03em;
+  margin:0;
+  font-family: "Raleway-Thin", sans-serif; 
+}
+.typography-example span:nth-child(1) {animation-delay: 1500ms;}
+.typography-example span:nth-child(2) {animation-delay: 2000ms;}
+.typography-example span:nth-child(3) {animation-delay: 2500ms;}
+.typography-example span:nth-child(4) {animation-delay: 3000ms;}
+.typography-example span:nth-child(5) {animation-delay: 3300ms;}
+.typography-example span:nth-child(6) {animation-delay: 100ms;}
+.typography-example span:nth-child(7) {animation-delay: 10ms;}
+.typography-example span:nth-child(8) {animation-delay: 10ms;}
+.typography-example span:nth-child(9) {animation-delay: 2500ms;}
+.typography-example span:nth-child(10) {animation-delay: 2800ms;}
+.typography-example span:nth-child(11) {animation-delay: 3100ms;}
+.typography-example span:nth-child(12) {animation-delay: 3500ms;}
+.typography-example span:nth-child(13) {animation-delay: 4600ms;}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.row {
+  margin: 0 auto;
+  text-align: center;
+}
+.column {
+  float: left;
+  width: 33%;
+  padding: 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+              /* ---------------SERVICES---------------- */
+
+.services {
+  background: grey;
+  margin:0;
+}
+.services-heading {
+  font-family: "Raleway-Thin", sans-serif; 
+  font-size: 2.5em;
+  letter-spacing: .025em;
+  padding-left: 80px;
+  color: #20252b;
+}
+.services-smallheading {
+  padding-top: 15px;
+  font-family: "Raleway-Thin", sans-serif;
+  padding-left: 80px;
+  font-size: 16px;
+  color: #20252b;
+}
+.services-columns {
+  padding-bottom: 20px;
+}
+.services-bgimg {
+  margin-top:0;
+  background-image: linear-gradient(to bottom, #8ea1ff, #e6f0ff);
+  min-height: 570px;
+  position: relative;
+  opacity: 0.9;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fa-6x {
+  margin-top: 70px;
+}
+.services-caption {
+  background-color:transparent;
+  color:white;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  user-select:none;
+  cursor: default;
+  color: #20252b;
+}
+.services-p {
+  font-size:18px;
+  text-align: left;
+  padding:0 50px;
+}
+
+       /* ---------------WORKS---------------- */
+
+.works {
+  background: #e2e7ff;
+  margin:0;
+}
+.works-heading {
+  font-family: "Raleway-Thin", sans-serif; 
+  font-size: 2.5em;
+  letter-spacing: .025em;
+  padding-left: 80px;
+  user-select:none;
+  cursor: default;
+  color: #20252b;
+}
+.works-bgimg {
+  margin-top:0;
+  background-image: url("http://www.acevets.co.uk/wp-content/uploads/2015/01/Page-Header-Banner_3.jpg");
+  min-height: 700px;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.works-caption {
+  background-color:transparent;
+  color:white;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 100%;
+}
+.sitesimages {
+  margin:0 auto;
+  margin-top:20px;
+  text-align: center;
+}
+.sitesimage {
+  margin:20px 20px;
+}
+.sitesimage:hover {
+  transform: scale(1.03);
+  transition: all 0.5s ease;
+}
+
+/* CONTACTS */
+
+.contacts {
+  height: 250px;
+  background: #dce4ff;
+  margin:0;
+  opacity: 0.9;
+  left: 0;
+  bottom: 0;
+  user-select:none;
+  cursor: default;
+}
+.contacts-heading {
+  padding-top: 60px;
+  font-family: "Raleway-Thin", sans-serif; 
+  font-size: 2.5em;
+  letter-spacing: .025em;
+  padding-left: 80px;
+  color: #20252b;
+}
+.contacts-socialbtns {
+  padding-left: 80px;
+  padding-top: 30px;
+}
+.contacts-socialbtns a {
+  padding: 10px;
+}
+.contacts-socialbtns i:hover {
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+.contacts-socialbtns a:first-child {
+  color: black;
+}
+.contacts-socialbtns a:nth-child(2) {
+  color: #ed0000;
+}
+.contacts-socialbtns a:nth-child(3) {
+  color: #2a78bb;
+}
+.contacts-socialbtns a:nth-child(4) {
+  color: #20252b;
+}
+.contacts-email {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 55px;
+  right: 50px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  color: black;
+  cursor: pointer;
+  font-size: 50px;
+  padding:0;
+}
+#myBtn:hover {
+  color: #555;
+}
+@media screen and (max-width: 1196px) {
+  .services-bgimg {min-height: 560px;}
+  .services-p {font-size:16px;padding:0 10px;}
+  .services-heading {padding-left: 30px;}
+  .services-smallheading {padding-left: 30px;}
+  .works-bgimg {min-height: 770px;}
+  .works-heading {padding-left: 30px;}
+  .contacts-heading {padding-left: 30px;}
+  .contacts-socialbtns {padding-left: 22px;padding-top: 10px;}
+}
+@media screen and (max-width: 967px) {
+  .column {float: none;width: 100%;padding: 10px;}
+  .services-bgimg {min-height: 1000px;}
+  .services-p {padding:0 30px;}
+  .services-heading {font-size: 2.5em;}
+  .fa-6x { margin-top: 20px;}
+  .typography-example {font-size:85px;}
+  .sitesimage {margin:5px 5px;}
+}
+@media screen and (max-width: 700px) {
+ 	.works-bgimg {min-height: 1100px;}
+}
+@media screen and (max-width: 580px) {
+	.services-bgimg {min-height: 1050px;}
+	.services-heading {font-size: 30px;}
+	.services-columns {font-size: 18px;}
+	.works-heading {font-size: 30px;}
+	.contacts-heading {font-size: 30px;}
+	.contacts-socialbtns {padding-left: 20px;}
+	.contacts-socialbtns i {transform: scale(0.8);}
+	#myBtn {font-size:40px;}
+}
+@media screen and (max-width: 450px) {
+	.services-bgimg {min-height: 1150px;}
+}
+</style>
+</head>
+<body>
+<!-- FIRST SECTION -->
+<div class="typography-example"><span>a</span><span>l</span><span>e</span><span>x</span><span>e</span><span>y</span><span> </span><span>y</span><span>a</span><span>f</span><span>a</span><br><span class="typography-smallheader">website creation &amp; visual content</span></div>
+
+<div style="width:95vw;height:100vh">
+</div>
+
+<section>
+<article class="services" id="myServices">
+
+<div class="services-bgimg">
+  <div class="services-caption">
+	<h1 class="services-heading">Services</h1>
+    <h4 class="services-smallheading">A unique process for each client to ensure that business objectives are met, success is achieved and users are happy.</h4>
+
+<div class="row services-row">
+	<div class="column">
+    <i class="fab fa-connectdevelop fa-6x" onmouseover="spinIcon(this)" onmouseout="normalIcon(this)"></i>
+		<h2 class="services-columns">Web design</h2>
+    <p class="services-p">If you have special needs or constraints in terms of design: creation or refresh of a logotype, a graphic charter, realization of a custom design, illustrations, i will answer all your requests.</p>
+	</div>
+	<div class="column">
+		<i class="fab fa-whmcs fa-6x" onmouseover="spinIcon(this)" onmouseout="normalIcon(this)"></i>
+    <h2 class="services-columns">Web development</h2>
+    <p class="services-p">I integrate the design of your site or adapt your theme, reserve your domain name and adapted hosting. After putting your site on line, I take care of maintenance and accompany you in the duration.</p>
+	</div>
+	<div class="column">
+		<i class="far fa-image fa-6x" onmouseover="spinIcon(this)" onmouseout="normalIcon(this)"></i>
+    <h2 class="services-columns">Visual content creator</h2>
+    <p class="services-p">Influencer on the Instagram network since 2016, I realize in line with my editorial line visuals for marketing campaigns orchestrated by specialized agencies or brands themselves.</p>
+	</div>
+</div>
+
+</div>
+</div>
+</article>
+</section>
+
+<section>
+<article class="works" id="myWork">
+ <div class="works-bgimg">
+  <div class="works-caption">
+	<h1 class="works-heading">My works</h1>
+     <div class="sitesimages">
+     <a href="https://desighnakasd.000webhostapp.com/design.html" target="_blank"><img class="sitesimage" src="img/design.jpg" alt="design" width="300" height="170"></a>
+     <a href="https://desighnakasd.000webhostapp.com/kvaza.html" target="_blank"><img class="sitesimage" src="img/kvaza.jpg" alt="kvaza" width="300" height="170"></a>
+     <a href="https://desighnakasd.000webhostapp.com/lambda/index.html" target="_blank"><img class="sitesimage" src="img/lambda.jpg" alt="lambda" width="300" height="170"></a>
+     <a href="https://desighnakasd.000webhostapp.com/qulix/qulixtest.html" target="_blank"><img class="sitesimage" src="img/qulix.jpg" alt="qulix" width="300" height="170"></a>
+     <a href="https://desighnakasd.000webhostapp.com/video.html" target="_blank"><img class="sitesimage" src="img/video.jpg" alt="video" width="300" height="170"></a>
+     </div>
+  </div>
+ </div>
+</article>
+</section>
+
+<section>
+<article class="contacts" id="myContacts">
+ <h1 class="contacts-heading">Contacts</h1>
+  <div class="contacts-socialbtns">
+  	<a href="https://www.instagram.com/alexey_yafa/" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
+  	<a href="https://www.youtube.com/user/yafrai/videos" target="_blank"><i class="fab fa-youtube fa-3x"></i></a>
+  	<a href="https://www.linkedin.com/in/alexey-anisimov-930088155/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+  	<a href="https://github.com/alexeyyafa" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+  	<p class="contacts-email">frai.92@gmail.com</p>
+  </div>
+</article>
+</section>
+
+<i class="fas fa-chevron-up" onclick="topFunction()" id="myBtn" title="Top"></i>
+
+<script>
+function spinIcon(x) {
+    x.classList.add("fa-spin");
+}
+
+function normalIcon(x) {
+    x.classList.remove("fa-spin");
+}
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>
