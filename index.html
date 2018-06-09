@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <title>Webcom</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+	@font-face {
+    font-family: OpenSans-Regular; 
+    src: url(fonts/OpenSans-Regular.ttf);
+}
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body {
+    font-family: "OpenSans-Regular", sans-serif;
+}
+img {vertical-align: middle;}
+
+.main-section {
+	height: 100%;
+    width: 100%;
+	background: url("img/bg.png");
+	border-bottom: 3px solid #ff8207;
+}
+header {
+	background: #28363d;
+	z-index: 10;
+	position:fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+}
+nav {
+	padding-top:38px;
+}
+.topnav a {
+	padding: 50px 30px;
+	font-size:14px;
+	color: white;
+	text-decoration: none;
+	margin:0 5px;
+	cursor:pointer;
+}
+.topnav a:nth-child(2) {
+	padding: 50px 40px;
+}
+.topnav a:nth-child(4) {
+	padding: 50px 10px;
+}
+.topnav a:nth-child(7) {
+	margin:0 20px;
+}
+.topnav a:nth-child(9) {
+    padding: 7px 25px;
+    color:#ff8207;
+    border:2px solid #ff8207;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    display: none;
+}
+.topnav a:nth-child(1) {
+	padding:0;
+	margin-left:255px;
+	margin-right: 60px;
+}
+.topnav a.navbar-phonenb {
+    font-family: "Myriad Pro";
+    font-weight: bold;
+	font-size:24px;
+	color: #ff8207;
+	text-decoration: none;
+	padding:0;
+	margin:0;
+	display: block;
+	position:absolute;
+	top:0;
+	left:1420px;
+	font-weight: bold;
+	padding-top:20px;
+	line-height: 1.8;
+}
+.navbar-menubtn:hover, .navbar-menubtn:active {
+	background: #1e292f;
+	color: #6b848c;
+	border-bottom: 4px solid #ff8207;
+}
+.topnav {
+    background: #28363d;
+}
+.topnav .icon {
+    display: none;
+}
+#menubtn1.scrolled {
+     padding: 28px 40px;  
+} 
+#menubtn2.scrolled {
+    padding: 28px 30px;  
+} 
+#menubtn3.scrolled {
+    padding: 28px 30px;  
+} 
+#menubtn4.scrolled {
+    padding: 28px 30px;  
+} 
+#menubtn5.scrolled {
+    padding: 28px 30px;  
+} 
+#menubtn6.scrolled {
+    padding: 28px 30px;  
+} 
+.topnav a:nth-child(9).scrolled {
+    display:inline;
+}
+.topnav a:nth-child(8).scrolled {
+    display:none;
+}
+@media screen and (max-width: 1500px) {
+    .topnav a:nth-child(8).scrolled {display:none;}
+    .topnav a:nth-child(8) {display:none;}
+}
+@media screen and (max-width: 1730px) {
+    .topnav a:nth-child(9).scrolled {display:none;}
+}
+@media screen and (max-width: 1660px) {
+    .topnav a {margin:0;padding:50px 15px;}
+    .topnav a:nth-child(1) {margin-left:120px;}
+    .topnav a:nth-child(2) {padding:50px 15px;}
+    .topnav a:nth-child(4) {padding:50px 15px;}
+    .topnav a:nth-child(7) {margin:0;}
+    .topnav a:nth-child(8) {left:1220px;}
+}
+@media screen and (max-width: 1450px) {
+    .topnav a:nth-child(1) {margin-left:55px;}
+}
+@media screen and (max-width: 1260px) {
+    .topnav a:nth-child(1) {margin-left:10px;margin-right: 15px;}
+    .topnav a {margin:0;padding:50px 15px;}
+    nav a:nth-child(2) {padding:50px 15px;}
+    nav a:nth-child(4) {padding:50px 15px;}
+}
+@media screen and (max-width: 1160px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+    float: right;
+    display: block;
+    font-size:30px;
+    color:white;
+    padding-right:3%;
+  }
+}
+@media screen and (max-width: 1160px) {
+    .topnav.responsive {position: relative;z-index: 10;}
+    .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
+    .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+    .topnav a {padding:14px 16px;}
+    .topnav a:nth-child(2) {padding:14px 16px;}
+    .topnav a:nth-child(4) {padding:14px 16px;}
+    nav {padding-top:38px;}
+    #menubtn1.scrolled {padding: 14px 16px;} 
+    #menubtn2.scrolled {padding: 14px 16px;} 
+    #menubtn3.scrolled {padding: 14px 16px;} 
+    #menubtn4.scrolled {padding: 14px 16px;}
+    #menubtn5.scrolled {padding: 14px 16px;} 
+    #menubtn6.scrolled {padding: 14px 16px;}
+    .topnav a:nth-child(9).scrolled {display:none;}
+    nav.scrolled {padding-top:38px;}
+}
+.main-container {
+	margin: 0 auto;
+    text-align: center;
+    max-width: 1000px;
+    padding-top: 21%;
+}
+.main-header {
+    font-size: 50px;
+    font-family: "Myriad Pro";
+    color: rgb(40, 54, 61);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 1.15rem;
+}
+.devider {
+	margin-top: 4%;
+}
+.main-paragraph {
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	margin-top: 4%;
+}
+.mainbtn {
+	text-transform: uppercase;
+	color: white;
+	background: #ff8207;
+	padding: 24px 37px;
+	border: none;
+	margin-top: 17%;
+	font-size: 1.8rem;
+	font-weight: bold;
+	line-height: 1.2;
+	letter-spacing: 2px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.mainbtn:hover {
+    background: #e67300;
+}
+.mySlides {display: none}
+
+
+.slideshow-container {
+    max-width: 1250px;
+    position: relative;
+    margin: auto;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    width: auto;
+    padding: 5px;
+    color: #ff8207;
+    font-size: 100px;
+    transition: 0.2s ease;
+    border-radius: 0 3px 3px 0;
+    opacity: 0.7;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+	opacity: 1;
+}
+.dot {
+    cursor: pointer;
+    height: 19px;
+    width: 19px;
+    margin: 0 3px;
+    background-color: rgb(40, 54, 61);;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    margin-top: 6.5%;
+}
+.active, .dot:hover {
+    background-color: #ff8207;;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 4s;
+    animation-name: fade;
+    animation-duration: 4s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.btn-to-down {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 3%;
+}
+.fa-angle-down {
+	margin-top: 5%;
+	color: white;
+    background: rgb(40, 54, 61);
+    padding: 14px 18px;
+    font-size:25px;
+	text-align: center;
+	border-radius: 50%;
+	opacity: 0.6;
+	cursor:pointer;
+}
+.fa-angle-down:hover {
+	opacity: 1;
+}
+
+@media only screen and (max-width: 900px) {
+    .main-section {min-height:800px;}
+    .main-container {margin-top: 70px;}
+    .prev, .next {font-size: 50px;  top: 70%;} 
+    .main-header {font-size: 30px;letter-spacing: 5px;}
+    .main-paragraph {font-size: 16px; margin-top: 40px;}
+    .mainbtn {padding: 10px 20px;margin-top: 100px;font-size: 20px;}
+    .dot {margin-top:40px;}
+    .fa-angle-down {margin-top:70px;}
+    .devider {display:none;}
+}
+@media only screen and (max-width: 600px) {
+    .main-section {min-height:700px;}
+    .dot {height: 15px;width: 15px;margin-top:20px;}
+    .mainbtn {padding: 10px 10px;margin-top: 70px;font-size: 16px;}
+    .fa-angle-down {margin-top:55px;}
+    .main-paragraph {font-size: 12px; margin-top: 60px;}
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 80%;
+    padding:3%; 
+}
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+/* PORTFOLIO SECTION */
+
+.portf-section {
+	height: 930px;
+	background: url("img/portfbg.png");
+	border-bottom: 3px solid #b5c4c4;
+}
+.portf-header {
+    font-size: 45px;
+    color: #28363d;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 7px;
+    margin-top: 50px;
+    font-weight: 500;
+}
+.separator {
+	margin: 0 auto;
+    display:block;
+    margin-top: 20px;
+}
+.portf-paragraph {
+	color: #8198a0;
+	font-size: 16px;
+	margin-top: 20px;
+	text-align: center;
+	line-height: 2.2;
+}
+.portf-img-container {
+	margin:0 auto;
+    margin-top: 45px;
+    max-width: 1440px;
+}
+.img-container {
+    position: relative;
+    width: 460px;
+    height: 320px;
+    background: #28363d;
+    float:left;
+    margin: 7px 10px;
+    cursor:pointer;
+}
+.img-container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.portf-img {
+    display: block;
+    text-align: center;
+    padding-top: 140px;
+}
+.overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: #d4d7d8;
+    color: #28363d; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    padding: 15px 50px 5px 50px;
+}
+.img-container:hover .overlay {
+    opacity: 1;
+}
+.portf-separator {
+    margin-top: 5px;
+}
+.portf-img-top-parag {
+    font-family: "Myriad Pro";
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.portf-img-bottom-parag {
+    font-family: "Myriad Pro";
+    color: #7b7b7b;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 2.25;
+}
+@media screen and (max-width: 1500px) {
+    .img-container {width: 360px;height: 220px;}
+    .portf-img-container {max-width: 1140px;}
+    .portf-img {padding-top: 90px;}
+    .portf-section {height: 730px;}
+}
+@media screen and (max-width: 1180px) {
+	.img-container {width: 260px;height: 120px;}
+	.portf-img-container {max-width: 580px;}
+	.portf-img {padding-top: 35px;}
+}
+@media screen and (max-width: 900px) {
+	.portf-paragraph {max-width:500px;margin:0 auto;line-height: 1;}
+}
+@media screen and (max-width: 700px) {
+	.portf-img-container {max-width: 280px;margin-top: 10px;}
+	.portf-section {height: 975px;}
+	.portf-header {font-size: 30px;letter-spacing: 1px;margin-top:30px;}
+	.separator {margin-top: 10px;}
+	.img-container {margin: 2px 10px;}
+	.portf-paragraph {margin-top:10px;padding:10px;}
+}
+
+/* ADVANTAGE SECTION */
+
+.advantage-section {
+	height: 700px;
+	background: white;
+}
+.adv-main-container {
+    margin:0 auto;
+    margin-top: 50px;
+    max-width: 1380px;
+}
+.adv-container {
+    float:left;
+    text-align: center;
+    width:24.99999%;
+    margin-bottom:45px;
+}
+.adv-container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.adv-header {
+    font-size: 45px;
+    color: #28363d;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 7px;
+    margin-top: 45px;
+    font-weight: 500;
+}
+.adv-paragraph {
+	color: #8198a0;
+	font-size: 16px;
+	margin-top: 20px;
+	text-align: center;
+	line-height: 2.2;
+}
+.adv-top-parag {
+    font-family: "Myriad Pro";
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    margin-top: 30px;
+}
+.adv-bottom-parag {
+    font-family: "Myriad Pro";
+    color: #8198a0;
+    font-size: 16px;
+    line-height: 2;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    .adv-container {width:49.99999%;margin-bottom:45px;}
+}
+
+@media screen and (max-width: 900px) {
+	.adv-header {letter-spacing: 1px;margin-top:50px;}
+	.adv-paragraph {max-width:500px;margin:0 auto;line-height: 1.5;}
+}
+@media screen and (max-width: 700px) {
+	.adv-header {font-size: 30px;margin-top:30px;}
+	.adv-paragraph {margin-top:10px;line-height: 1;padding:10px;}
+	.adv-bottom-parag {line-height: 1;}
+}
+@media screen and (max-width: 600px) {
+    .adv-container {width:100%;}
+}
+
+/* CONTACTS SECTION */
+
+.contact-section {
+	min-height: 950px;
+	background: white;
+}
+.contact-main-container {
+    margin:0 auto;
+    margin-top: 20px;
+    max-width: 970px;
+}
+.contact-container {
+    float:left;
+    width:58%;
+    padding-left:5px;
+}
+.left-cont-container {
+    width:42%;
+}
+.contact-container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.contact-top-p {
+    font-family: "Myriad Pro";
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-top: 22px;
+    color:#ff8207;
+}
+.contact-bottom-p {
+    color: #999999;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+form {
+	margin:0;
+	margin-top: 22px;
+}
+label {
+    font-family: "Myriad Pro";
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 1.7;
+    color: #28363d;
+}
+input[type=text], textarea, input[type=email], select {
+    width: 100%;
+    font-family: "Myriad Pro";
+    padding:0;
+    border:none;
+    border-bottom: 1px solid #c0c0c0;
+    margin-bottom: 15px;
+    resize: vertical;
+    color: #c0c0c0;
+    font-size: 18px;
+    font-style: italic;
+    outline: none;
+    opacity: 0.5;
+}
+input[type=text]:focus, textarea:focus, select:focus, input[type=email]:focus {
+	border-bottom: 1px solid #ff8207;
+}
+input[type=submit] {
+    text-transform: uppercase;
+    color: white;
+    background: #ff8207;
+    padding: 20px 55px;
+	border: none;
+	font-size: 16px;
+	line-height: 1.2;
+	letter-spacing: 2px;
+	border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+input[type=submit]:hover {
+     background: #e67300;
+}
+.photoform {
+    font-family: "Myriad Pro";
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 1.7;
+    color: #28363d;
+    margin-left: 10px;
+}
+.image-upload > input {
+    display: none;
+}
+input[type=file] {
+    cursor:pointer;
+}
+.imgupl {
+	cursor:pointer;
+}
+.imgupl:hover {
+}
+.image-upload {
+	margin-bottom: 15px;
+}
+.capcha {
+    margin-right: 180px;
+}
+#topBtn {
+	display: none;
+	position: fixed;
+	margin:20px;
+	bottom:70px;
+	right: 14%;
+	font-size:45px;
+	color:orange;
+	cursor:pointer;
+	z-index: 99;
+	padding: 5px 7px;
+    color:#ff8207;
+    border:3px solid #ff8207;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1800px) {
+	    #topBtn {right:5%;}
+}
+@media screen and (max-width: 1200px) {
+    .contact-container {width:100%;padding-left:5px;float:none;text-align: center;}
+    .left-cont-container {width:100%;}
+    .contact-section {margin-bottom:70px;}
+    .contact-main-container {max-width: 700px;margin-top:50px;}
+    .left-cont-container {margin-bottom:70px;}
+    .contact-top-p {font-weight: bold;text-transform: uppercase;font-size: 18px;}
+    label {font-weight: bold;font-size: 18px;line-height: 1;color: #28363d;}
+    .image-upload {margin-bottom: 25px;}
+    .photoform {font-weight: bold;font-size: 18px;line-height: 1;margin-left: 10px;}
+}
+
+@media screen and (max-width: 900px) {
+	input[type=submit] {padding: 10px 15px;font-size: 14px;line-height: 1;}
+	.imgupl {transform: scale(0.7);}
+	.contact-main-container {max-width: 500px;}
+	.capcha {margin-right: 80px;}
+	#topBtn {font-size:30px;}
+}
+
+@media screen and (max-width: 600px) {
+    .contact-top-p {font-size: 16px;}
+    label {font-size: 16px;}
+    .photoform {font-size: 16px;}
+    .contact-main-container {max-width: 300px;}
+    input[type=submit] {padding: 12px 5px;font-size: 12px;}
+    .capcha {margin-right: 5px;}
+    #topBtn {right:3%;}
+}
+
+/* FOOTER SECTION */
+
+footer {
+    bottom: 0;
+    color:white;
+}
+.footer-main-container {
+    min-height: 250px;
+    background-image: url(img/fbg.png);
+    background-color: #28363d;
+}
+.footer-container {
+	margin: 0 auto;
+	max-width: 1800px;
+}
+.footer-column {
+    float: left;
+    width: 33%;
+    padding: 5px;
+}
+.small-foot-cont {
+	padding:0 200px;
+}
+.left-column {
+    text-align: left;
+}
+.center-column {
+    text-align: center;
+}
+.right-column {
+    text-align: right;
+}
+.footerlogo {
+	margin: 0 auto;
+    display:block;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    float:left;
+}
+.footerlogo:after {
+	content: "";
+    display: table;
+    clear: both;
+}
+.separator-left {
+    margin:0;
+    display:block;
+    margin-bottom:15px;
+}
+.footer-heading {
+	font-size: 15px;
+	letter-spacing: 1px;
+	color: white;
+	margin-top: 50px;
+	text-transform: uppercase;
+}
+.footer-paragraph {
+    font-size:13px;
+}
+.separator-center {
+    margin-top: 40px;
+}
+
+.separator-right {
+	margin:0;
+	display:inline;
+    margin-bottom:15px;
+    margin-top: 40px;
+}
+.footerbtns {
+	margin-top: 15px;
+}
+.footer-socialbtn {
+	padding:0 12px;
+	color:white;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	text-align: center;
+	font-size:24px;
+}
+
+.footer-socialbtn i:hover {
+    transform: scale(1.2);
+    transition: 0.5s ease;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.footer-botton {
+	bottom: 0;
+    height: 60px;
+    background: #1e292f;
+    border-bottom: 2px solid #ff8207;
+}
+.footer-botton-p {
+	color:white;
+	text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+@media screen and (max-width: 1900px) {
+    .small-foot-cont {padding:0 150px;}
+    .footerlogo { display:inline; margin-top: 50px;margin-bottom: 5px;float:none;}
+}
+
+@media screen and (max-width: 1700px) {
+	.small-foot-cont {padding:0 50px;}
+	.footerlogo { display:inline; margin-top: 50px;margin-bottom: 5px;float:none;}
+}
+
+@media screen and (max-width: 900px) {
+	.small-foot-cont {padding:0 10px;}
+}
+
+@media screen and (max-width: 700px) {
+    .footer-column {float: none;width: 100%;}
+    .left-column {text-align: center;}
+    .right-column {text-align: center;}
+    .separator-left {margin:0 auto;display:block;margin-bottom:15px;}
+    .separator-center {margin-top: 10px;margin-bottom:15px;}
+    .separator-right {margin-bottom:15px;margin-top: 10px;}
+    .footer-botton-p {padding: 15px 0;letter-spacing: 1px;font-size: 12px;}
+    .footer-heading {margin-top: 30px;}
+}
+</style>
+</head>
+<body>
+<section class="main-section" id="main-section">
+<header id="header">
+<nav class="topnav" id="myTopnav">
+ <a class="navbar-logo" href="#main-section"><img src="img/logo.png" alt="logo"></a>
+ <a class="navbar-menubtn" id="menubtn1" href="#main-section">ГЛАВНАЯ</a>
+ <a class="navbar-menubtn" id="menubtn2" href="#portf-section">ПОРТФОЛИО</a>
+ <a class="navbar-menubtn" id="menubtn3" href="#advantage-section">ПРЕИМУЩЕСТВА</a>
+ <a class="navbar-menubtn" id="menubtn4" href="#main-section">СХЕМА РАБОТЫ</a>
+ <a class="navbar-menubtn" id="menubtn5" href="#contact-section">ОТЗЫВЫ</a>
+ <a class="navbar-menubtn" id="menubtn6" href="#contact-section">КОНТАКТЫ</a>
+ <a class="navbar-phonenb" id="phonebtn" href="#">+375 (29) 123-45-67<br>+375 (33) 123-45-67</a>
+ <a class="navbar-requestbtn" id="requestbtn" href="#">оформить заявку</a>
+ <a href="javascript:void(0);" class="icon" onclick="responsFunc()">
+   <i class="fa fa-bars"></i></a>
+</nav>
+</header>
+<div class="slideshow-container">
+<div class="mySlides fade">
+<div class="main-container">
+<h1 class="main-header">главный заголовок</h1>
+<img class="devider" src="img/devider.png" alt="devider">
+<p class="main-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing<br>
+elit, sed do eiusmod tempor incididunt<br>
+ut labore et doloremagna aliqua.</p>
+<button class="mainbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">оформить заявку</button>
+</div>
+</div>
+
+<div class="mySlides fade">
+<div class="main-container">
+<h1 class="main-header">главный заголовок</h1>
+<img class="devider" src="img/devider.png" alt="devider">
+<p class="main-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing<br>
+elit, sed do eiusmod tempor incididunt<br>
+ut labore et doloremagna aliqua.</p>
+<button class="mainbtn">оформить заявку</button>
+</div>
+</div>
+
+<div class="mySlides fade">
+<div class="main-container">
+<h1 class="main-header">главный заголовок</h1>
+<img class="devider" src="img/devider.png" alt="devider">
+<p class="main-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing<br>
+elit, sed do eiusmod tempor incididunt<br>
+ut labore et doloremagna aliqua.</p>
+<button class="mainbtn">оформить заявку</button>
+</div>
+</div>
+
+<div class="mySlides fade">
+<div class="main-container">
+<h1 class="main-header">главный заголовок</h1>
+<img class="devider" src="img/devider.png" alt="devider">
+<p class="main-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing<br>
+elit, sed do eiusmod tempor incididunt<br>
+ut labore et doloremagna aliqua.</p>
+<button class="mainbtn">оформить заявку</button>
+</div>
+</div>
+
+<div class="mySlides fade">
+<div class="main-container">
+<h1 class="main-header">главный заголовок</h1>
+<img class="devider" src="img/devider.png" alt="devider">
+<p class="main-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing<br>
+elit, sed do eiusmod tempor incididunt<br>
+ut labore et doloremagna aliqua.</p>
+<button class="mainbtn">оформить заявку</button>
+</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></a>
+<a class="next" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+</div>
+<div class="btn-to-down">
+<a href="#portf-section"><i class="fas fa-angle-down"></i></a>
+</div>
+</section>
+
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <div class="container">
+    <label for="name">Ваше имя</label>
+    <input type="text" id="modalname" name="name" placeholder="Иванов Иван" required>
+    <label for="email">E-mail</label>
+    <input type="email" id="modalemail" name="email" placeholder="E-mail.." required>
+    <label for="subj">Должность</label>
+    <input type="text" id="modalsubj" name="subject" required>
+    <label for="message">Отзыв</label>
+    <textarea id="modalmessage" name="message" placeholder="Ваше сообщение" required style="height:200px"></textarea>
+    <input type="submit" value="Отправить">
+    </div>
+  </form>
+</div>
+
+<!-- PORTFOLIO SECTION -->
+
+<section class="portf-section" id="portf-section">
+
+<h1 class="portf-header">наша работа</h1>
+<img class="separator" src="img/separator.png" alt="separator">
+<p class="portf-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et<br> dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+
+<div class="portf-img-container">
+<div class="img-container">
+  <div class="portf-img"><img src="img/photo134.png" alt="photo134"></div>
+  <div class="overlay">
+  	<p class="portf-img-top-parag">название работы</p>
+  	<img class="portf-separator" src="img/separator.png" alt="separator">
+  	<p class="portf-img-bottom-parag">описание работы</p>
+  </div>
+</div>
+
+<div class="img-container">
+  <div class="portf-img"><img src="img/photo134.png" alt="photo134"></div>
+  <div class="overlay">
+  	<p class="portf-img-top-parag">название работы</p>
+  	<img class="portf-separator" src="img/separator.png" alt="separator">
+  	<p class="portf-img-bottom-parag">описание работы</p>
+  </div>
+</div>
+
+<div class="img-container">
+  <div class="portf-img"><img src="img/photo134.png" alt="photo134"></div>
+  <div class="overlay">
+  	<p class="portf-img-top-parag">название работы</p>
+  	<img class="portf-separator" src="img/separator.png" alt="separator">
+  	<p class="portf-img-bottom-parag">описание работы</p>
+  </div>
+</div>
+
+<div class="img-container">
+  <div class="portf-img"><img src="img/photo134.png" alt="photo134"></div>
+  <div class="overlay">
+  	<p class="portf-img-top-parag">название работы</p>
+  	<img class="portf-separator" src="img/separator.png" alt="separator">
+  	<p class="portf-img-bottom-parag">описание работы</p>
+  </div>
+</div>
+
+<div class="img-container">
+  <div class="portf-img"><img src="img/photo134.png" alt="photo134"></div>
+  <div class="overlay">
+  	<p class="portf-img-top-parag">название работы</p>
+  	<img class="portf-separator" src="img/separator.png" alt="separator">
+  	<p class="portf-img-bottom-parag">описание работы</p>
+  </div>
+</div>
+
+<div class="img-container">
+  <div class="portf-img"><img src="img/photo134.png" alt="photo134"></div>
+  <div class="overlay">
+  	<p class="portf-img-top-parag">название работы</p>
+  	<img class="portf-separator" src="img/separator.png" alt="separator">
+  	<p class="portf-img-bottom-parag">описание работы</p>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- ADVANTAGE SECTION -->
+
+<section class="advantage-section" id="advantage-section">
+
+<h1 class="adv-header">почему мы</h1>
+<img class="separator" src="img/separator.png" alt="separator">
+<p class="adv-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et<br> dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+
+<div class="adv-main-container">
+
+<div class="adv-container">
+  <div class="adv-image"><img src="img/Monitor.png" alt=""></div>
+  	<p class="adv-top-parag">преимущество 1</p>
+  	<p class="adv-bottom-parag">Sed ut perspiciatis unde omnis iste<br> natus error sit voluptatem<br> accusantium</p>
+</div>
+
+<div class="adv-container">
+  <div class="adv-image"><img src="img/Magic.png" alt=""></div>
+  	<p class="adv-top-parag">преимущество 2</p>
+  	<p class="adv-bottom-parag">Sed ut perspiciatis unde omnis iste<br> natus error sit voluptatem<br> accusantium</p>
+</div>
+
+<div class="adv-container">
+  <div class="adv-image"><img src="img/Rocket.png" alt=""></div>
+  	<p class="adv-top-parag">преимущество 3</p>
+  	<p class="adv-bottom-parag">Sed ut perspiciatis unde omnis iste<br> natus error sit voluptatem<br> accusantium</p>
+</div>
+
+<div class="adv-container">
+  <div class="adv-image"><img src="img/Globe.png" alt=""></div>
+  	<p class="adv-top-parag">преимущество 4</p>
+  	<p class="adv-bottom-parag">Sed ut perspiciatis unde omnis iste<br> natus error sit voluptatem<br> accusantium</p>
+</div>
+
+<div class="adv-container">
+  <div class="adv-image"><img src="img/Settings.png" alt=""></div>
+  	<p class="adv-top-parag">преимущество 5</p>
+  	<p class="adv-bottom-parag">Sed ut perspiciatis unde omnis iste<br> natus error sit voluptatem<br> accusantium</p>
+</div>
+
+<div class="adv-container">
+  <div class="adv-image"><img src="img/Layers.png" alt=""></div>
+  	<p class="adv-top-parag">преимущество 6</p>
+  	<p class="adv-bottom-parag">Sed ut perspiciatis unde omnis iste<br> natus error sit voluptatem<br> accusantium</p>
+</div>
+
+<div class="adv-container">
+  <div class="adv-image"><img src="img/Wrench.png" alt=""></div>
+  	<p class="adv-top-parag">преимущество 7</p>
+  	<p class="adv-bottom-parag">Sed ut perspiciatis unde omnis iste<br> natus error sit voluptatem<br> accusantium</p>
+</div>
+
+<div class="adv-container">
+  <div class="adv-image"><img src="img/Note.png" alt=""></div>
+  	<p class="adv-top-parag">преимущество 8</p>
+  	<p class="adv-bottom-parag">Sed ut perspiciatis unde omnis iste<br> natus error sit voluptatem<br> accusantium</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACTS SECTION -->
+
+<section class="contact-section" id="contact-section">
+
+<h1 class="portf-header">оставьте отзыв</h1>
+<img class="separator" src="img/separator.png" alt="separator">
+<p class="portf-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et<br> dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+
+<div class="contact-main-container">
+<div class="contact-container left-cont-container">
+	<p class="contact-top-p">наш адрес</p>
+	<p class="contact-bottom-p">г.Минск, ул. Скрыганова, 6А, 4 этаж</p>
+	<p class="contact-top-p">звоните</p>
+	<p class="contact-bottom-p">+375 (29) 123-45-67,  +375 (33) 123-45-67</p>
+	<p class="contact-top-p">пишите</p>
+	<p class="contact-bottom-p">info@promo-webcom.by</p>
+</div>
+<div class="contact-container">
+<form action="/action_page.php" method="post" enctype="multipart/form-data">
+    <label for="name">ваше имя</label>
+    <input type="text" id="name" name="name" placeholder="Иванов Иван" required>
+    <label for="email">e-mail</label>
+    <input type="email" id="email" name="email" placeholder="example@mysite.com" required>
+    <label for="subj">ваша должность</label>
+    <input type="text" id="subj" name="subject" placeholder="Должность" required>
+
+    <label for="message">отзыв</label>
+    <textarea id="message" name="message" placeholder="Ваше сообщение" rows="5" required></textarea>
+<div class="image-upload">
+    <label for="file-input">
+        <img src="img/botton.png" alt="imgbotton" class="imgupl">
+    </label>
+    <input id="file-input" name="avatar" type="file"/>
+    <span class="photoform">ФОТО</span>
+</div>
+    <label for="subj">введите код с картинки</label>
+    <input type="text" id="capchasubj" name="subject" placeholder="" required>
+    <img class="capcha" src="img/capcha.png" alt="capcha">
+    <input type="submit" name="submit" value="отправить">
+</form>
+</div>
+</div>
+<i class="fas fa-arrow-up" onclick="topFunction()" id="topBtn" title="Top"></i>
+</section>
+
+<!-- FOOTER SECTION -->
+
+<footer class="page-footer">
+<div class="footer-main-container">
+<div class="footer-container">
+<div class="row">
+
+<div class="footer-column left-column">
+<div class="small-foot-cont">
+<img class="footerlogo" src="img/footerlogo.png" alt="footerlogo">
+<img class="separator separator-left" src="img/separator.png" alt="separator">
+<p class="footer-paragraph">Дисклаймер компании</p>
+</div>
+</div>
+
+<div class="footer-column center-column">
+<div class="small-foot-cont">
+<h3 class="footer-heading">мы в соцсетях</h3>
+<img class="separator separator-center" src="img/separator.png" alt="separator">
+<div class="footerbtns">
+<a class="footer-socialbtn" href="#"><i class="fab fa-instagram"></i></a>
+<a class="footer-socialbtn" href="#"><i class="fab fa-twitter"></i></a>
+<a class="footer-socialbtn" href="#"><i class="fab fa-facebook-f"></i></a>
+</div>
+</div>
+</div>
+
+<div class="footer-column right-column">
+<div class="small-foot-cont">
+<h3 class="footer-heading">адрес</h3>
+<img class="separator separator-right" src="img/separator.png" alt="separator">
+<p class="footer-paragraph right-paragraph">г. Минск, ул. Скрыганова, 6А,<br>
+4 этаж</p>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="footer-botton"><p class="footer-botton-p">Copyrights 2015 © Webcom Media</p></div>
+</footer>
+
+<script>
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+function responsFunc() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("header").style.height = "80px";
+         document.getElementById("myTopnav").style.paddingTop = "20px";
+          document.getElementById("phonebtn").classList.add("scrolled");
+          document.getElementById("requestbtn").classList.add("scrolled");
+           document.getElementById("menubtn1").classList.add("scrolled");
+           document.getElementById("menubtn2").classList.add("scrolled");
+           document.getElementById("menubtn3").classList.add("scrolled");
+           document.getElementById("menubtn4").classList.add("scrolled");
+           document.getElementById("menubtn5").classList.add("scrolled");
+           document.getElementById("menubtn6").classList.add("scrolled");
+
+       
+    } else if (document.body.scrollTop < 20 || document.documentElement.scrollTop < 20) {
+        document.getElementById("header").style.height = "120px";
+        document.getElementById("myTopnav").style.paddingTop = "38px";
+        document.getElementById("requestbtn").classList.remove("scrolled");
+        document.getElementById("phonebtn").classList.remove("scrolled");
+           document.getElementById("menubtn1").classList.remove("scrolled");
+           document.getElementById("menubtn2").classList.remove("scrolled");
+           document.getElementById("menubtn3").classList.remove("scrolled");
+           document.getElementById("menubtn4").classList.remove("scrolled");
+           document.getElementById("menubtn5").classList.remove("scrolled");
+           document.getElementById("menubtn6").classList.remove("scrolled");
+    }
+
+   if (document.body.scrollTop > 2900 || document.documentElement.scrollTop > 2900) {
+        document.getElementById("topBtn").style.display = "block";
+    } else {
+        document.getElementById("topBtn").style.display = "none";
+    }
+}
+
+$("[href^='#']").click(function() {
+var idtop = $($(this).attr("href")).offset().top;
+$('html,body').animate(
+    {scrollTop: idtop}, 500);
+return false;
+});
+
+</script>
+</body>
+</html>
